@@ -1,0 +1,12 @@
+@import '../abstracts/colors';
+
+.label {
+  font-size: 0.9em;
+  font-weight: 500;
+  &.yellow {
+    background: lighten(map-get($theme-colors, "yellow" ), 40%);
+    padding: 0.5em 2em;
+    border-radius: 40px;
+    color: map-get($theme-colors, "yellow" );
+  }
+}

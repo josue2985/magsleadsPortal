@@ -1,0 +1,87 @@
+@import "../../../../assets/scss/abstracts/colors";
+@import "../../../../assets/scss/abstracts/variables";
+
+.container-grid.news {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 2em;
+  grid-row-gap: 0px;
+  grid-template-rows: 1fr;
+  .col2 {
+    .titles {
+      h1 {
+        color: map-get($theme-colors, "black");
+        font-size: 2em;
+      }
+      h4 {
+        color: map-get($theme-colors, "gray");
+        font-size: 1.1em;
+        margin-top: 2em;
+        margin-bottom: 0.8em;
+      }
+      .line {
+        display: block;
+        background: map-get($theme-colors, "yellow");
+        width: 6em;
+        height: 0.3em;
+        margin-bottom: 2em;
+      }
+    }
+    .table-container {
+      table {
+        border-spacing: 0;
+        width: 100%;
+        thead {
+          background: #1c4973;
+          tr {
+            th {
+              padding: 1em;
+              color: map-get($theme-colors, "white");
+              text-align: left;
+            }
+          }
+        }
+        tbody {
+          tr {
+            th,
+            td {
+              padding: 1em;
+              text-align: left;
+            }
+          }
+          tr:nth-child(even) {
+            background: #f7f7f7;
+          }
+        }
+      }
+      .select-btn {
+        background: map-get($theme-colors, "yellow");
+        border: 0;
+        padding: 0.5em 1em;
+        border-radius: 1em;
+        transition: all 240ms ease-out;
+        &:hover {
+          background: lighten(map-get($theme-colors, "yellow"), 5%);
+        }
+        a {
+          color: #fff;
+          text-decoration: none;
+          font-weight: bold;
+          user-select: none;
+        }
+      }
+    }
+  }
+}
+
+.sides-padding {
+  padding-right: 15em;
+  padding-left: 15em;
+}
+
+@media screen  and (max-width: 1024px) /* Desktop */ {
+  .sides-padding {
+    padding-right: 2em;
+    padding-left: 2em;
+  }
+}

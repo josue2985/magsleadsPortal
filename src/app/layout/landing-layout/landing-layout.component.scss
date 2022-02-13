@@ -1,0 +1,26 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr auto;
+  gap: 0px 0px;
+  grid-template-areas:
+    "navigation"
+    "content"
+    "footer";
+}
+
+.navigation {
+  grid-area: navigation;
+  position: absolute;
+  width: 100%;
+  z-index: 999;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.content {
+  grid-area: content;
+  grid-row-start:1 ;
+}

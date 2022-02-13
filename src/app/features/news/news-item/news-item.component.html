@@ -1,0 +1,23 @@
+<app-header [sectionTitle]="sectionTitle"></app-header>
+<div class="container-grid news sides-padding">
+  <div class="col2">
+    <div class="table-container">
+      <div id="news-content" class="content-box">
+        <div class="container">
+          <div class="titles">
+            <h1>{{ news.headline }}</h1>
+            <div class="line"></div>
+            <h4>By {{ news.author }} &nbsp; {{ news.date }}</h4>
+
+          </div>
+          <div class="content-feed">
+            <div class="change-ratio">
+              <img class="img-fluid" [src]="news.src" style="width: 100%" />
+            </div>
+            <div class="byline" [innerHTML]="news.content"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

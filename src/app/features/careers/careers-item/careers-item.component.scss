@@ -1,0 +1,61 @@
+@import "../../../../assets/scss/abstracts/colors";
+@import "../../../../assets/scss/abstracts/variables";
+
+.container {
+  .titles {
+    h1 {
+      color: map-get($theme-colors, "black");
+      font-size: 2em;
+    }
+    h4 {
+      color: map-get($theme-colors, "gray");
+      font-size: 1.1em;
+      margin-top: 2em;
+      margin-bottom: 0.8em;
+    }
+    .line {
+      display: block;
+      background: map-get($theme-colors, "yellow");
+      width: 6em;
+      height: 0.3em;
+      margin-bottom: 2em;
+    }
+  }
+  h6 {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: map-get($theme-colors, "gray");
+  }
+  ul {
+      li {
+        font-size: 1em;
+        color: #576078;
+        line-height: 1.8;
+      }
+  }
+  button.normal {
+    background: map-get($theme-colors, "yellow");
+    border: 0;
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: $btn-transitions;
+    i, a, a:not([href]):not([class]) {
+      color: map-get($theme-colors, "black");
+      text-decoration: none;
+    }
+    &:hover {
+      background:lighten(map-get($theme-colors, "yellow"), 5%)
+    }
+  }
+}
+
+
+
+@media screen  and (max-width: 1024px) /* Desktop */ {
+  .sides-padding {
+    padding-right: 2em;
+    padding-left: 2em;
+  }
+}
+

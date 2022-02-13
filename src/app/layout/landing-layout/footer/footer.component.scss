@@ -1,0 +1,123 @@
+@import "../../../../assets/scss/abstracts/colors";
+@import "../../../../assets/scss/abstracts/variables";
+
+.footer {
+  // background: linear-gradient(180deg, #ffffff 72%, #c0ccd7 100%);
+  padding-top: 2em;
+  margin-top: 2em;
+  .content {
+    display: grid;
+    grid-template-columns: 40% repeat(2, 10%) auto;
+    grid-template-rows: 1fr;
+    grid-column-gap: 5em;
+    grid-row-gap: 0px;
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 81%;
+      height: 1px;
+      background: #d2dde6;
+    }
+    .desktop-break {
+      display: block;
+    }
+    .col1,
+    .col2,
+    .col3,
+    .col4 {
+      margin-top: 5em;
+    }
+    .col1 {
+      img {
+        max-width: 8em;
+        height: auto;
+        cursor: pointer;
+        margin-bottom: 0.8em;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    ul {
+      padding: 0;
+      li {
+        list-style-type: none;
+        line-height: 2.5;
+        a {
+          color: map-get($theme-colors, "gray");
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .end {
+    .container-end {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid #ddd;
+      margin-top: 5em;
+      padding-right: 0;
+      padding-left: 0;
+      margin-right: 0;
+      margin-left: 0;
+    }
+    p {
+      font-size: 0.9em;
+      margin-top: 0.8em;
+    }
+    .social-media {
+      ul {
+        padding: 0;
+        display: flex;
+        li {
+          list-style-type: none;
+          line-height: 2.5;
+          &:not(:last-child) {
+            margin-right: 10px;
+          }
+          a {
+            font-size: 1.3em;
+            color: map-get($theme-colors, "gray");
+            text-decoration: none;
+            font-size: 1em;
+            transition: $btn-transitions;
+            &:hover {
+              color: #828fb1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 979px) /* Tablet */ {
+  .content {
+    grid-template-columns: repeat(auto-fit, minmax(12em, 1fr)) !important;
+  }
+
+  .container-end {
+    flex-direction: column;
+    div {
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .desktop-break {
+    display: none !important;
+  }
+  .col1 {
+    margin-top: 3em !important;
+  }
+  .col2,
+  .col3,
+  .col4 {
+    margin-top: 0em !important;
+  }
+}

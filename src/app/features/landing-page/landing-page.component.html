@@ -1,0 +1,187 @@
+<div class="grid-container">
+  <div class="navigation">
+    <nav class="navigation__container sides-padding fade-in-navigation">
+      <div class="logo">
+        <img routerLink="/" src="/assets/img/logo-soroban.svg" alt="Soroban logo" />
+        <button class="btn-login-mobile"><a href="#">Login</a></button>
+      </div>
+      <div class="menu desktop">
+        <!-- <ul>
+          <li>
+            <a routerLink="/about-us" routerLinkActive="active">About Us</a>
+          </li>
+        </ul> -->
+        <button><a href="#">Crear una calculadora</a></button>
+      </div>
+      <div class="menu mobile">
+        <button>
+          <a (click)="toogleMobileMenu = !toogleMobileMenu"
+            ><i class="fas fa-bars"></i
+          ></a>
+        </button>
+        <div *ngIf="toogleMobileMenu" class="items-container">
+          <div>
+            <div class="main sides-padding">
+              <img src="/assets/img/logo@2x.png" alt="seeya logo" />
+              <button>
+                <a (click)="toogleMobileMenu = !toogleMobileMenu"
+                  ><i class="fas fa-bars"></i
+                ></a>
+              </button>
+            </div>
+          </div>
+          <ul>
+            <li>
+              <a routerLink="/about-us" routerLinkActive="active">About Us</a>
+            </li>
+            <li>
+              <a routerLink="/careers" routerLinkActive="active">Careers</a>
+            </li>
+            <li>
+              <a routerLink="/contactus" routerLinkActive="active">Contact Us</a>
+            </li>
+          </ul>
+          <button><a href="#">Business Login</a></button>
+        </div>
+        <div
+          *ngIf="toogleMobileMenu"
+          (click)="toogleMobileMenu = !toogleMobileMenu"
+          class="backdrop"
+        ></div>
+      </div>
+    </nav>
+  </div>
+  <div class="content">
+     <!--Hero Header-->
+    <div class="header">
+     <!-- call to action -->
+      <section class="hero-content m-t-5">
+        <div class="bg-picture">
+          <div class="info">
+            <img class="logo" src="../../../assets/img/logo.svg" alt="seeya landing page" />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia,
+              assumenda maxime velit quisquam ipsum reiciendis quos, porro
+              exercitationem obcaecati, corporis sint at hic nam! Debitis aliquam amet
+              optio sequi eveniet.
+            </p>
+            <div class="stores-btn">
+              <div class="apps-store">
+                <img src="../../../assets/img/appstore@2x.png" alt="seeya store" />
+              </div>
+              <div class="play-store">
+                <img src="../../../assets/img/playstore@2x.png" alt="seeya store" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Waves end-->
+    </div>
+    <!-- hero mobile -->
+    <section class="hero-banner-mobile">
+      <div class="hero-banner__title sides-padding grid-container">
+        <div class="titles fade-in-caption">
+          <h1>Accidents happen which is why we are here to help you.</h1>
+        </div>
+        <div class="picture text-center fade-in-image">
+          <picture>
+            <source
+              media="(max-width: 500px)"
+              srcset="/assets/img/mobile-hand-4mobile@2x.png"
+            />
+            <img src="/assets/img/mobile-hand-4mobile@2x.png" alt="seeya" />
+          </picture>
+          <h6>
+            The CrashPal™ app streamlines and simplifies the documentation
+            process after an accident.
+          </h6>
+          <div class="input-request-demo">
+            <input type="text" placeholder="name@domain.com" />
+            <input type="button" value="Request Demo" />
+          </div>
+        </div>
+      </div>
+      <div class="svg-wrapper">
+        <picture>
+          <source
+            media="(max-width: 500px)"
+            srcset="/assets/img/shape-mobile@2x.png"
+          />
+          <img src="/assets/img/shape-mobile@2x.png" alt="shapeseeya" />
+        </picture>
+      </div>
+    </section>
+    <!-- cards calculator -->
+    <section class="cards-calculators sides-padding">
+      <div *ngFor="let calc of catalog">
+        <img [src]="calc.src" alt="" srcset="">
+        {{calc.headline}}<br>
+        {{calc.byline}}
+      </div>
+    </section>
+    <!-- description 1 -->
+    <section class="description-1 m-t-5">
+      <div class="hero-image">
+        <picture>
+          <img
+            src="../../../assets/img/landing/simple@2x.png"
+            alt="seeya landing page"
+          />
+        </picture>
+      </div>
+      <div class="wording sides-padding">
+        <h2>
+          <span class="yellow">Simple.</span> We’ve thought of everything so you can
+          focus on the good stuff.
+        </h2>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industry’s standard. Lorem Ipsum is simply dummy
+          text of the printing and typesetting industry. Lorem Ipsum has been the
+          industry’s standard.
+        </p>
+        <div class="cta text-left m-t-5">
+          <button class="arrow-btn">
+            <a class="arrow text-bold">Find out more</a>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- description 2 -->
+    <section class="description-2 m-t-5">
+      <div class="wording sides-padding">
+        <h2>
+          <span class="yellow">Instant.</span> Share destinations and receive in
+          just a few taps.
+        </h2>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industry’s standard. Lorem Ipsum is simply dummy
+          text of the printing and typesetting industry. Lorem Ipsum has been the
+          industry’s standard.
+        </p>
+        <div class="cta text-left m-t-5">
+          <button class="arrow-btn">
+            <a class="arrow text-bold">Schedule a Demo</a>
+          </button>
+        </div>
+      </div>
+      <div class="hero-image">
+        <picture>
+          <img
+            src="../../../assets/img/landing/instant@2x.png"
+            alt="seeya landing page"
+          />
+        </picture>
+      </div>
+    </section>
+    <!-- cta 1 -->
+    <section class="cta-project">
+      <div>
+        cta idea proyecto
+      </div>
+    </section>
+  </div>
+</div>

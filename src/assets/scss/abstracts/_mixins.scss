@@ -1,0 +1,3 @@
+@mixin calcHeight($viewportHeight: $defaultvh, $pixels: $pixels){
+  height: Calc(#{$viewportHeight}vh - #{ $pixels}px);
+}

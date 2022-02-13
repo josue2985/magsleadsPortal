@@ -1,0 +1,71 @@
+<app-header [sectionTitle]="sectionTitle"></app-header>
+<div class="container-grid news-media sides-padding">
+  <div class="col2">
+    <div class="titles">
+      <h1>News Update</h1>
+      <div class="line"></div>
+    </div>
+    <div class="table-container">
+
+      <div class="content-box">
+        <div class="container">
+          <div class="content-feed" *ngFor="let n of news">
+            <div [ngSwitch]="n.isInternal">
+              <div *ngSwitchDefault>
+                <div class="title">
+                  <a [routerLink]="['/news', n.name]">{{
+                    n.headline
+                  }}</a>
+                </div>
+                <div class="change-ratio feed">
+                  <img
+                    class="img-fluid feed"
+                    *ngIf="n.srcType == 'photo'"
+                    [src]="n.src"
+                  />
+                </div>
+                <div *ngIf="n.srcType == 'video'" class="video-container">
+                  <iframe
+                    width="760"
+                    height="428"
+                    [src]="n.src"
+                    frameborder="0"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="byline">{{ n.byline }}</div>
+                <div class="author-box">
+                  <a>By {{ n.author }}</a
+                  >&nbsp; {{ n.date | date: "MMMM dd, yyyy" }}
+                </div>
+              </div>
+
+              <!-- <div class="external" *ngSwitchCase="false">
+                <div class="change-ratio feed" *ngIf="n.srcType == 'photo'">
+                  <img class="img-fluid feed" [src]="environment + n.src" />
+                </div>
+                <div *ngIf="n.srcType == 'video'" class="video-container">
+                  <iframe
+                    width="760"
+                    height="428"
+                    [src]="n.src | safe"
+                    frameborder="0"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="title font-bold font-uppercase">
+                  <a [href]="n.path">{{ n.headline }}</a>
+                </div>
+                <div class="byline">{{ n.byline }}</div>
+                <div class="author-box">
+                  <a>By {{ n.author }}</a
+                  >&nbsp; {{ n.date | date: "MMMM dd, yyyy" }}
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

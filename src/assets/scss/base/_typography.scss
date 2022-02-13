@@ -1,0 +1,43 @@
+@import '../abstracts/colors';
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+h1 {
+  font-size: 2.8em;
+  color: map-get($theme-colors, "black");
+}
+h2 {
+  font-size: 2.188em;
+  color: map-get($theme-colors, "black");
+}
+h3 {
+  font-size: 1.250em;
+  color: map-get($theme-colors, "black");
+}
+h6 {
+  font-size: 1.188em;
+  font-weight: 300;
+}
+p {
+  font-size: 1.000em;
+  color: map-get($theme-colors, "gray");
+  line-height: 1.8;
+}
+a.bg {
+  color: map-get($theme-colors, "yellow");
+  padding: 4px 5px;
+  border-radius: 5px;
+  transition: $btn-transitions;
+  &:hover {
+    color:lighten(map-get($theme-colors, "yellow"), 5%);
+    background: #00000008;
+  }
+}
+a {
+  color: map-get($theme-colors, "yellow");
+  &:hover {
+    color:lighten(map-get($theme-colors, "yellow"), 5%);
+  }
+}

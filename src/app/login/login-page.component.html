@@ -1,0 +1,53 @@
+<!-- <button (click)="change()">change</button> -->
+<div [ngSwitch]="userId">
+  <div class="signIn__container" *ngSwitchCase="101" [@enterTrigger]="'fadeIn'">
+    <div class="titleBox__container">
+      <h2 class="titleBox__title">Sign in to CrashPal</h2>
+      <h6 class="titleBox__subtitle">Enter your details below</h6>
+    </div>
+    <div class="formBox__container">
+      <form class="crashPalform__container" action="">
+        <div class="form__item">
+          <label class="form__label" for="username">User or Email Address</label>
+          <input class="form__input" name="username" type="text">
+        </div>
+        <div class="form__item">
+          <label for="password">Password</label>
+          <input name="password" type="password">
+        </div>
+        <div class="actionsBox">
+          <button (click)="change()" class="btn normal"><a>Login</a></button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="selectManufacturer__container" *ngSwitchCase="102" [@enterTrigger]="'fadeIn'">
+    <div class="titleBox__container">
+      <h2 class="titleBox__title">Select Manufacturer</h2>
+      <h6 class="titleBox__subtitle">Please select your vehicle manufacturer</h6>
+    </div>
+    <div class="formBox__container">
+      <form class="crashPalform__container" action="">
+        <div class="form__item manufacturer">
+         <ul>
+           <li>
+            <input type="checkbox" id="cb1" />
+            <label for="cb1"><img src="https://gpsites.co/elementor-one/wp-content/uploads/sites/69/2020/09/logo-6.svg" /></label>
+           </li>
+           <li>
+            <input type="checkbox" id="cb2" />
+            <label for="cb2"><img src="https://gpsites.co/elementor-one/wp-content/uploads/sites/69/2020/09/logo-6.svg" /></label>
+           </li>
+           <li>
+            <input type="checkbox" id="cb3" />
+            <label for="cb3"><img src="https://gpsites.co/elementor-one/wp-content/uploads/sites/69/2020/09/logo-6.svg" /></label>
+           </li>
+         </ul>
+        </div>
+        <div class="actionsBox">
+          <button class="btn normal"><a href="#">Continue</a></button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

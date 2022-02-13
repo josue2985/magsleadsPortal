@@ -1,0 +1,34 @@
+.fade-in-image {
+  animation: fadeIn 400ms ease-in;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in-caption {
+  animation: fadeInCaption 400ms ease-in;
+}
+@keyframes fadeInCaption {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.fade-in-navigation {
+  animation: fadeIn 400ms ease-in;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

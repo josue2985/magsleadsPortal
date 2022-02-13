@@ -1,0 +1,30 @@
+<app-header [sectionTitle]="sectionTitle"></app-header>
+<div class="container sides-padding">
+  <div class="titles">
+    <h1>{{career?.position}}</h1>
+    <!-- <h4>CURRENT OPPORTUNITIES</h4> -->
+    <div class="line"></div>
+  </div>
+  <h6>Job Description</h6>
+  <p class="mb-5">{{career?.description}}</p>
+  <div class="row">
+    <div class="col-md-6" *ngFor="let requirements of career?.requirementColumns">
+      <div *ngFor="let items of requirements.items">
+        <h6 class="mb-4">{{items?.title}}</h6>
+        <p *ngIf="items?.subtitle">{{items?.subtitle}}</p>
+        <ul>
+          <li *ngFor="let content of items?.content">{{content.item}}
+            <ul *ngIf="content.subItem">
+              <li *ngFor="let a of content.subItem; let i = index">{{a}}</li>
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: 60px;text-align: center;">
+    <button  class="normal mr-5"> <i class="fa fa-fw fa-arrow-left mr-2"></i> <a (click)="onBack()">Back to Careers</a> </button>
+    <button class="normal" > <i class="fa fa-fw fa-envelope mr-2"></i> <a (click)="onApply()">Apply Now</a> </button>
+  </div>
+</div>

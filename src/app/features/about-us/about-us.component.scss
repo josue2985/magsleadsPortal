@@ -1,0 +1,11 @@
+.sides-padding {
+  padding-right: 15em;
+  padding-left: 15em;
+}
+
+@media screen  and (max-width: 1024px) /* Desktop */ {
+  .sides-padding {
+    padding-right: 2em;
+    padding-left: 2em;
+  }
+}

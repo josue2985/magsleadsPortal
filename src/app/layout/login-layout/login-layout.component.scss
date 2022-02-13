@@ -1,0 +1,72 @@
+@import "./../../../assets/scss/abstracts/colors";
+@import "./../../../assets/scss/abstracts/variables";
+
+.loginLayout__container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: auto 500px;
+  grid-template-rows: 100%;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  .headerPanel__container {
+    position: absolute;
+    width: 97%;
+  }
+  .leftSide__container {
+    background: map-get($theme-colors, "white");
+    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    align-content: center;
+  }
+
+  .rightSide__container {
+    grid-area: 1 / 2 / 2 / 3;
+    position: relative;
+    padding-top: 5em;
+    display: flex;
+    &.rightSide__container--background {
+      background: linear-gradient(332deg, #f7fbff 20%, #bcdeff 74%);
+    }
+  }
+  .infoCard {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    .infoCard__picture {
+      margin-bottom: 1em;
+      img {
+        width: 75px;
+      }
+    }
+    .infoCard__label {
+      font-weight: 500;
+      font-size: 1.1em;
+      padding: 2px 80px;
+    }
+  }
+
+  .pictureHand {
+    width: 100%;
+    position: absolute;
+    bottom: -32px;
+    right: -88px;
+    img {
+      width: 79%;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .loginLayout__container {
+    grid-template-columns: auto;
+  }
+  .rightSide__container {
+    display: none !important;
+  }
+}

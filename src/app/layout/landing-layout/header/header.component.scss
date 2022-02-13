@@ -1,0 +1,60 @@
+.header {
+  position: relative;
+  margin-bottom: 3em;
+  .title {
+    position: absolute;
+    z-index: 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    h2 {
+      margin-top: 12%;
+      color: #23313e;
+    }
+  }
+  div.clip {
+    max-width: 100%;
+    height: 20em;
+    box-shadow: inset -1px -5px 16px #9ac3eb52;
+    background: linear-gradient(0deg, #f8fcff 72%, #bcdeff 100%);
+    // background: linear-gradient(to right, #183c5fe3, #0a3156e0),
+    // url(/assets/img/header-friends@2x.jpg) center center;
+    background-size: cover;
+    transition: 0.4s cubic-bezier(1, -1, 0, 2);
+    clip-path: ellipse(60% 100% at 50% 0%);
+  }
+}
+
+@media screen and (max-width: 979px) /* Tablet */ {
+  .header {
+    position: relative;
+    margin-bottom: 0em;
+    .title {
+      position: absolute;
+      z-index: 9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      h2 {
+        font-size: 1.5em;
+        margin-top: 22%;
+      }
+    }
+    div.clip {
+      max-width: 100%;
+      height: 17em;
+      box-shadow: inset 0px -40px 16px 0px #9ac3eb;
+      background: linear-gradient(0deg, #f7fcff 72%, #bcdeff 100%);
+      background-size: cover;
+      transition: 0.4s cubic-bezier(1, -1, 0, 2);
+      clip-path: ellipse(97% 84% at 50% 0%);
+    }
+  }
+}
+
+@media screen and (max-width: 500px) /* Mobile */ {
+}
