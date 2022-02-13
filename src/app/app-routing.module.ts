@@ -10,6 +10,8 @@ import { AboutUsComponent } from '@features/about-us/about-us.component';
 import { CareersItemComponent } from '@features/careers/careers-item/careers-item.component';
 import { NewsComponent } from '@features/news/news.component';
 import { NewsItemComponent } from '@features/news/news-item/news-item.component';
+import { CatalogComponent } from '@features/catalog/catalog.component';
+import { CatalogItemComponent } from '@features/catalog/catalog-item/catalog-item.component';
 import { PrivacyPolicyComponent } from '@features/privacy-policy/privacy-policy.component';
 import { TermsOfUseComponent } from '@features/terms-of-use/terms-of-use.component';
 
@@ -30,6 +32,12 @@ const routes: Routes = [
       { path: 'news' , component: NewsComponent},
       {
         path: 'news/:newsName', component: NewsItemComponent
+      },
+      {
+        path: 'calculadora', component: CatalogComponent
+      },
+      {
+        path: 'calculadora/:calculatorName', component: CatalogItemComponent
       },
       { path: 'privacy-policy' , component: PrivacyPolicyComponent},
       { path: 'terms-of-use' , component: TermsOfUseComponent},

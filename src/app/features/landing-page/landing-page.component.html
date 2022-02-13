@@ -115,11 +115,7 @@
     </section>
     <!-- cards calculator -->
     <section class="cards-calculators sides-padding">
-      <div *ngFor="let calc of catalog">
-        <img [src]="calc.src" alt="" srcset="">
-        {{calc.headline}}<br>
-        {{calc.byline}}
-      </div>
+      <app-catalog></app-catalog>
     </section>
     <!-- description 1 -->
     <section class="description-1 m-t-5">

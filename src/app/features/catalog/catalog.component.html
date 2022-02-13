@@ -1,0 +1,6 @@
+<div *ngFor="let calc of calculators">
+  <img [src]="calc.src" alt="" srcset="">
+  {{calc.headline}}<br>
+  {{calc.byline}}
+  <a [routerLink]="['/calculadora' , calc.name] " >ir por ello</a>
+</div>

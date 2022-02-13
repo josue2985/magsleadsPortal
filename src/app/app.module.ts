@@ -22,6 +22,9 @@ import { CareersService } from './shared/services/careers.service';
 import { NewsService } from './shared/services/news.service';
 import { NewsComponent } from './features/news/news.component';
 import { NewsItemComponent } from './features/news/news-item/news-item.component';
+import { CatalogService } from './shared/services/catalog.service';
+import { CatalogComponent } from './features/catalog/catalog.component';
+import { CatalogItemComponent } from './features/catalog/catalog-item/catalog-item.component';
 import { PrivacyPolicyComponent } from './features/privacy-policy/privacy-policy.component';
 import { TermsOfUseComponent } from './features/terms-of-use/terms-of-use.component';
 
@@ -44,7 +47,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NewsComponent,
     NewsItemComponent,
     PrivacyPolicyComponent,
-    TermsOfUseComponent
+    TermsOfUseComponent,
+    CatalogComponent,
+    CatalogItemComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +60,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   providers: [
     CareersService,
-    NewsService
+    NewsService,
+    CatalogService
   ],
   bootstrap: [AppComponent]
 })

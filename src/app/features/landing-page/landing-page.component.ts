@@ -1,6 +1,5 @@
 import { Component, OnInit, Renderer2, OnDestroy } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
-import { ICalcs, CatalogService } from '../../shared/services/catalog.service';
 
 @Component({
   selector: 'app-landing-page',
@@ -9,21 +8,15 @@ import { ICalcs, CatalogService } from '../../shared/services/catalog.service';
 })
 export class LandingPageComponent implements OnInit, OnDestroy  {
 
-  catalog: ICalcs[];
 
   toogleMobileMenu = false;
 
   constructor(
     private router: Router,
-    private renderer: Renderer2,
-    private catalogService: CatalogService,
+    private renderer: Renderer2
   ) { }
 
   ngOnInit(): void {
-    this.catalogService.getCatalog().then( calcs => {
-      this.catalog = calcs;
-      console.log(this.catalog);
-    });
     this.renderer.addClass(document.body, 'bg-light-blue');
     this.router.events.subscribe((evt) => {
       if (!(evt instanceof NavigationEnd)) {
