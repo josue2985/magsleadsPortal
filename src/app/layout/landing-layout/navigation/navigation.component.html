@@ -1,16 +1,16 @@
 <nav class="navigation__container sides-padding">
   <div class="logo">
-    <img routerLink="/" src="/assets/img/logo@2x.png" alt="seeya logo">
+    <i class="icon logo-magnet" routerLink="/"></i>
   </div>
   <div class="menu desktop">
-    <ul>
+    <!-- <ul>
       <li><a routerLink="/about-us" routerLinkActive="active">About Us</a></li>
       <li><a routerLink="/careers" routerLinkActive="active">Careers</a></li>
       <li><a routerLink="/contactus" routerLinkActive="active">Contact Us</a></li>
-    </ul>
-    <button><a href="#">Login</a></button>
+    </ul> -->
+    <button class="text-bold outline">Crear una calculadora</button>
   </div>
-  <div class="menu mobile">
+  <!-- <div class="menu mobile">
     <button><a (click)="toogleMobileMenu = !toogleMobileMenu"><i class="fas fa-bars"></i></a></button>
     <div *ngIf="toogleMobileMenu" class="items-container">
       <div>
@@ -27,5 +27,5 @@
       <button><a href="#">Business Login</a></button>
     </div>
     <div *ngIf="toogleMobileMenu" (click)="toogleMobileMenu = !toogleMobileMenu" class="backdrop"></div>
-  </div>
+  </div> -->
 </nav>

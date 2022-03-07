@@ -2,7 +2,7 @@
   <div class="navigation">
     <nav class="navigation__container sides-padding fade-in-navigation">
       <div class="logo">
-        <img routerLink="/" src="/assets/img/logo-soroban.svg" alt="Soroban logo" />
+        <i class="icon logo-magnet" routerLink="/"></i>
         <button class="btn-login-mobile"><a href="#">Login</a></button>
       </div>
       <div class="menu desktop">
@@ -11,9 +11,9 @@
             <a routerLink="/about-us" routerLinkActive="active">About Us</a>
           </li>
         </ul> -->
-        <button><a href="#">Crear una calculadora</a></button>
+        <button class="btn outline">Crear una calculadora</button>
       </div>
-      <div class="menu mobile">
+      <!-- <div class="menu mobile">
         <button>
           <a (click)="toogleMobileMenu = !toogleMobileMenu"
             ><i class="fas fa-bars"></i
@@ -48,39 +48,87 @@
           (click)="toogleMobileMenu = !toogleMobileMenu"
           class="backdrop"
         ></div>
-      </div>
+      </div> -->
     </nav>
   </div>
   <div class="content">
      <!--Hero Header-->
     <div class="header">
      <!-- call to action -->
-      <section class="hero-content m-t-5">
+      <section class="hero-content">
         <div class="bg-picture">
           <div class="info">
-            <img class="logo" src="../../../assets/img/logo.svg" alt="seeya landing page" />
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia,
-              assumenda maxime velit quisquam ipsum reiciendis quos, porro
-              exercitationem obcaecati, corporis sint at hic nam! Debitis aliquam amet
-              optio sequi eveniet.
-            </p>
-            <div class="stores-btn">
-              <div class="apps-store">
-                <img src="../../../assets/img/appstore@2x.png" alt="seeya store" />
+            <h1>Convierte Clicks<br> en Clientes!</h1>
+            <div class="features-box">
+              <div>
+               <ul>
+                 <li>
+                   <i class="icon icon-check"></i>
+                    Genera leads de calidad
+                 </li>
+                 <li>
+                  <i class="icon icon-check"></i>
+                  Usos ilimitados
+                 </li>
+               </ul>
               </div>
-              <div class="play-store">
-                <img src="../../../assets/img/playstore@2x.png" alt="seeya store" />
+              <div>
+               <ul>
+                 <li>
+                  <i class="icon icon-check"></i>
+                  Gratis para siempre
+                 </li>
+                 <li>
+                  <i class="icon icon-check"></i>
+                  No requiere suscripción
+                 </li>
+               </ul>
               </div>
             </div>
           </div>
+          <!-- Left Elements -->
+          <div class="bg-elements left-element water-3d move-up-down">
+            <img class="follow-mouse" src="../../../assets/img/landing-page/hero/water-3d-icon.png" alt="calcular agua para tomar">
+          </div>
+         <div class="bg-elements left-element imc-3d move-up-down">
+            <img class="follow-mouse" src="../../../assets/img/landing-page/hero/imc-3d-icon.png" alt="">
+          </div>
+           <div class="bg-elements left-element money-3d-blur">
+            <img class="follow-mouse" src="../../../assets/img/landing-page/hero/money-app-3d-icon.png" alt="">
+          </div>
+          <div class="bg-elements left-element taxes-3d move-down-up">
+            <img class="follow-mouse" src="../../../assets/img/landing-page/hero/taxes-3d-icon.png" alt="">
+          </div>
+          <div class="bg-elements left-element circle-blue move-down-up">
+            <img src="../../../assets/img/landing-page/hero/circle-blue.png" alt="">
+          </div>
+          <!-- Right Elements -->
+          <div class="bg-elements right-element ideal-3d move-down-up">
+            <img class="follow-mouse" src="../../../assets/img/landing-page/hero/ideal-weight-3d-icon.png" alt="calcular agua para tomar">
+          </div>
+          <div class="bg-elements right-element taxes-3d ">
+            <img class="follow-mouse" src="../../../assets/img/landing-page/hero/taxes-3d-icon.png" alt="calcular agua para tomar">
+          </div>
+          <div class="bg-elements right-element app-3d move-down-up">
+            <img class="follow-mouse" src="../../../assets/img/landing-page/hero/money-app-3d-icon.png" alt="calcular agua para tomar">
+          </div>
+          <div class="bg-elements right-element web-3d move-up-down">
+            <img class="follow-mouse" src="../../../assets/img/landing-page/hero/web-3d-icon.png" alt="calcular agua para tomar">
+          </div>
+          <div class="bg-elements right-element star-3d move-down-up">
+            <img src="../../../assets/img/landing-page/hero/circle-yelow.png" alt="calcular agua para tomar">
+          </div>
+          <div class="bg-elements right-element duo-circles-3d move-up-down">
+            <img class="follow-mouse" src="../../../assets/img/landing-page/hero/two-circles.png" alt="calcular agua para tomar">
+          </div>
+
         </div>
       </section>
 
       <!--Waves end-->
     </div>
     <!-- hero mobile -->
-    <section class="hero-banner-mobile">
+    <!-- <section class="hero-banner-mobile">
       <div class="hero-banner__title sides-padding grid-container">
         <div class="titles fade-in-caption">
           <h1>Accidents happen which is why we are here to help you.</h1>
@@ -112,35 +160,46 @@
           <img src="/assets/img/shape-mobile@2x.png" alt="shapeseeya" />
         </picture>
       </div>
-    </section>
+    </section> -->
     <!-- cards calculator -->
     <section class="cards-calculators sides-padding">
+      <div class="emoji-3d emoji3d-move-down-up">
+        <img src="../../../assets/img/landing-page/emoji-pencil.png" alt="">
+      </div>
       <app-catalog></app-catalog>
     </section>
     <!-- description 1 -->
-    <section class="description-1 m-t-5">
+    <section class="description-1">
       <div class="hero-image">
-        <picture>
-          <img
-            src="../../../assets/img/landing/simple@2x.png"
-            alt="seeya landing page"
-          />
-        </picture>
+        <div class="top-layer user-icon move-up-down">
+          <img class="follow-mouse" src="../../../assets/img/landing-page/feature1/top-icon.png" alt="">
+        </div>
+        <div class="top-layer star1-icon move-down-up">
+          <img class="follow-mouse" src="../../../assets/img/landing-page/feature1/top-star.png" alt="">
+        </div>
+        <div class="top-layer emoji move-down-up">
+          <img class="follow-mouse" src="../../../assets/img/landing-page/feature1/emoji-happy-face.png" alt="">
+        </div>
+        <div class="top-layer bottom-star move-up-down">
+          <img class="follow-mouse" src="../../../assets/img/landing-page/feature1/bottom-left-star.png" alt="">
+        </div>
+        <div class="top-layer bottom-icon move-down-up">
+          <img class="follow-mouse" src="../../../assets/img/landing-page/feature1/bottom-left.png" alt="">
+        </div>
+
+       <img class="bg-layer" src="../../../assets/img/landing-page/feature1/bg-image.png" alt="">
       </div>
       <div class="wording sides-padding">
         <h2>
-          <span class="yellow">Simple.</span> We’ve thought of everything so you can
-          focus on the good stuff.
+          <span class="blue">Experiencias</span> que atrapan.
         </h2>
         <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          Lorem Ipsum has been the industry’s standard. Lorem Ipsum is simply dummy
-          text of the printing and typesetting industry. Lorem Ipsum has been the
-          industry’s standard.
+          Empieza la relacion con tus visitantes con el pie derecho integrando nuestros mags y genera valor dentro de tu publico objetivo.
+          <strong> En promedio nuestros mags ayudan a landing pages como el tuyo a convertir entre un 20% - 40% más.</strong>
         </p>
         <div class="cta text-left m-t-5">
           <button class="arrow-btn">
-            <a class="arrow text-bold">Find out more</a>
+            <a class="arrow text-bold">Empieza gratis</a>
           </button>
         </div>
       </div>
@@ -149,8 +208,7 @@
     <section class="description-2 m-t-5">
       <div class="wording sides-padding">
         <h2>
-          <span class="yellow">Instant.</span> Share destinations and receive in
-          just a few taps.
+          <span class="blue">Empieza</span> con el pie derecho.
         </h2>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -165,19 +223,27 @@
         </div>
       </div>
       <div class="hero-image">
-        <picture>
-          <img
-            src="../../../assets/img/landing/instant@2x.png"
-            alt="seeya landing page"
-          />
-        </picture>
+        <div class="top-layer bulb-light move-up-down">
+          <img class="follow-mouse" src="../../../assets/img/landing-page/feature2/bulb-light.png" alt="">
+        </div>
+        <div class="top-layer emoji move-down-up">
+          <img class="follow-mouse" src="../../../assets/img/landing-page/feature2/emoji-inlove.png" alt="">
+        </div>
+        <div class="top-layer hand-icon move-up-down">
+          <img class="follow-mouse" src="../../../assets/img/landing-page/feature2/handicon.png" alt="">
+        </div>
+
+       <img class="bg-layer" src="../../../assets/img/landing-page/feature2/bg-picture.png" alt="">
       </div>
     </section>
     <!-- cta 1 -->
-    <section class="cta-project">
+    <section class="cta-project sides-padding">
       <div>
-        cta idea proyecto
+        <app-cta-catalog-items></app-cta-catalog-items>
       </div>
+    </section>
+    <section>
+      <app-footer></app-footer>
     </section>
   </div>
 </div>

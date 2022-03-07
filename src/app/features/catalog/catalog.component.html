@@ -1,6 +1,22 @@
-<div *ngFor="let calc of calculators">
-  <img [src]="calc.src" alt="" srcset="">
-  {{calc.headline}}<br>
-  {{calc.byline}}
-  <a [routerLink]="['/calculadora' , calc.name] " >ir por ello</a>
+<div class="grid-cards">
+  <div [routerLink]="['/calculadora' , calc.name]" class="card" *ngFor="let calc of calculators">
+    <div class="image-container {{calc.name}}" >
+      <div class="reactions">
+        <div class="likes">
+          {{ this.calc?.countLikes }}
+        </div>
+        <div class="views">
+          {{ this.calc?.countViews }}
+        </div>
+      </div>
+      <div class="pic">
+        <img [src]="calc.src" alt="">
+      </div>
+    </div>
+    <div class="body-card">
+      <h3>{{calc.headline}}</h3>
+      <p>{{calc.byline}}</p>
+    </div>
+    <br>
+  </div>
 </div>

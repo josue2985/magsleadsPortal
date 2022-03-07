@@ -1,0 +1,61 @@
+@import "./../../../../assets/scss/abstracts/colors";
+@import "./../../../../assets/scss/abstracts/variables";
+
+.cta-container {
+  background: #f0f4f8;
+  border-radius: $border-radius-boxes;
+  padding: 3.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 0;
+
+  .background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    min-height: 100%;
+    width: 100%;
+    background: url("../../../../assets/img/cta-elements/bg-cta.png");
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: #dfefff;
+    opacity: 0.5;
+    z-index: 1;
+    border-radius: $border-radius-boxes;
+  }
+  .middle-txt {
+    position: relative;
+    z-index: 2;
+  }
+  h2 {
+    font-size: 3.5em;
+  }
+  button.normal {
+    background-color: #29bfeb;
+  }
+  img.icons {
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(16px, 23px);
+    transition: all 250ms ease-out;
+  }
+  .icon-right {
+    position: absolute;
+    width: 10em;
+    right: 10px;
+    z-index: 2;
+    top: 19px;
+  }
+  .icon-left {
+    position: absolute;
+    width: 10em;
+    left: 10px;
+    z-index: 2;
+    bottom: 19px;
+  }
+}

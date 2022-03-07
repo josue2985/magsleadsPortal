@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -30,6 +30,17 @@ import { TermsOfUseComponent } from './features/terms-of-use/terms-of-use.compon
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+// Calculators imports
+
+import { BmiCalculatorComponent } from '@features/calculators/bmi-calculator/bmi-calculator.component';
+import { IdealWeightCalculatorComponent } from '@features/calculators/ideal-weight-calculator/ideal-weight-calculator.component';
+import { MaxLengthDirective } from './shared/directive/max-length.directive';
+
+// Explanations Impoprts
+import { BmiExplanationComponent } from '@features/calculators/bmi-explanation/bmi-explanation.component';
+import { CtaCatalogItemsComponent } from './shared/components/cta-catalog-items/cta-catalog-items.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,14 +60,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     PrivacyPolicyComponent,
     TermsOfUseComponent,
     CatalogComponent,
-    CatalogItemComponent
+    CatalogItemComponent,
+    BmiCalculatorComponent,
+    IdealWeightCalculatorComponent,
+    BmiExplanationComponent,
+    CtaCatalogItemsComponent,
+    MaxLengthDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     CareersService,

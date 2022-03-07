@@ -32,3 +32,27 @@
     opacity: 1;
   }
 }
+
+.move-up-down {
+  animation: up 2s ease-in infinite  alternate;
+}
+@keyframes up {
+  0% { transform: translate(0px, 0px); }
+  100% { transform: translate(-10px, -25px); }
+}
+
+.move-down-up {
+  animation: down 2.5s ease-in infinite  alternate;
+}
+@keyframes down {
+  0% { transform: translate(-10px, -25px); }
+  100% { transform: translate(0px, 0px); }
+}
+
+.emoji3d-move-down-up {
+  animation: down1 3s ease-in infinite  alternate;
+}
+@keyframes down1 {
+  0% { transform: translate(0px, -15px); }
+  100% { transform: translate(0px, 0px); }
+}

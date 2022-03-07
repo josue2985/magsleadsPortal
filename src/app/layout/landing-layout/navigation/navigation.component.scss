@@ -8,6 +8,9 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 20px;
+  .icon.logo-magnet {
+    cursor: pointer;
+  }
   .logo {
     img {
       width: 9em;
@@ -46,24 +49,6 @@
     }
   }
 
-  button {
-    background: transparent;
-    border: 2px solid map-get($theme-colors, "yellow");
-    padding: 8px 30px;
-    border-radius: 5px;
-    margin-left: 4em;
-    cursor: pointer;
-    transition: $btn-transitions;
-    a {
-      color: map-get($theme-colors, "black");
-      font-weight: 500;
-      font-size: 1.063em;
-      text-decoration: none;
-    }
-    &:hover {
-      background: lighten(map-get($theme-colors, "yellow"), 5%);
-    }
-  }
 }
 
 .navigation__container.nolanding {

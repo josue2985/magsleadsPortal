@@ -1,0 +1,153 @@
+@import "../../../../assets/scss/abstracts/colors";
+@import "../../../../assets/scss/abstracts/variables";
+
+.header-item {
+  // background-color: red;
+  padding-top: 192px;
+  padding-bottom: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  .col1 {
+    h2 {
+      font-size: 3.5em;
+    }
+    h4 {
+      font-size: 1.2em;
+      font-weight: normal;
+    }
+  }
+  .col2 {
+    text-align: right;
+    margin-left: auto;
+    position: relative;
+    right: 62px;
+    top: 100px;
+    img {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translate(16px, 23px);
+      transition: all 250ms ease-out;
+    }
+  }
+  &.beige {
+    background-color: #ffedc5;
+  }
+  .box-item {
+    // box-shadow: 0 12px 24px 1px #a9b7c536;
+    border-radius: $border-radius-boxes;
+    max-width: 300px;
+    background: #ffffffe6;
+    padding: 2em;
+    position: relative;
+    padding-top: 4em;
+    z-index: 6;
+    .icon-header {
+      position: absolute;
+      top: -41px;
+      background: white;
+      border-radius: 50%;
+      transform: scale(1.4);
+      left: 36%;
+      img {
+        max-width: 5em;
+        transform: scale(0.89);
+      }
+    }
+    .box-content {
+      .reactions {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 50%;
+        margin: auto;
+        .likes {
+          &::before {
+            display: inline-block;
+            content: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg viewBox='0 0 30.593 28.048' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath transform='translate(-4.999 -8.744)' d='M20.833,36.436a.592.592,0,0,1-1.076.021,16.558,16.558,0,0,0-6.669-7.033c-4.671-2.585-7.563-6.734-8.035-11.087-.426-3.942,1.581-8.782,8.035-9.531a6.675,6.675,0,0,1,6.72,2.936.6.6,0,0,0,1,.011A6.822,6.822,0,0,1,27.5,8.806c6.452.749,8.459,5.589,8.035,9.531-.47,4.353-3.363,8.5-8.035,11.087a16.458,16.458,0,0,0-6.669,7.012Z' fill='%23cf4054' fill-rule='evenodd'/%3E%3C/svg%3E%0A");
+            background-size: 15px 15px;
+            height: 15px;
+            width: 15px;
+          }
+        }
+        .views {
+          &::before {
+            display: inline-block;
+            content: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg viewBox='0 0 34.23 26.624' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath transform='translate(-3 -5)' d='M20.115,5C12.457,5,5.883,10.479,3,18.312c2.883,7.833,9.457,13.312,17.115,13.312S34.347,26.145,37.23,18.312C34.347,10.479,27.773,5,20.115,5Z' fill='%239ba4b4' data-name='Path 27'/%3E%3Cellipse transform='translate(11.387 7.302)' cx='5.85' cy='5.85' rx='5.85' ry='5.85' fill='%23495b7a' data-name='Ellipse 1'/%3E%3C/svg%3E%0A");
+            background-size: 15px 15px;
+            height: 15px;
+            width: 15px;
+          }
+        }
+      }
+      .share-options {
+        text-align: center;
+        margin-top: 2em;
+        margin-bottom: 1em;
+        ul {
+          list-style-type: none;
+          padding-inline-start: 0px;
+          margin-top: 0.5em;
+          li {
+            display: inline-block;
+            &:not(:last-child) {
+              margin-right: 1em;
+            }
+            i.icon {
+              width: 25px;
+            }
+          }
+        }
+      }
+      .actions-buttons {
+        text-align: center;
+        button {
+          width: 100%;
+          &:not(:last-child) {
+            margin-bottom: 0.8em;
+          }
+        }
+      }
+    }
+  }
+
+
+  .left-top-star {
+    position: absolute;
+    top: -64px;
+    left: -25px;
+    width: 2.5em;
+  }
+  .right-top-circle {
+    position: absolute;
+    top: -39px;
+    right: -67px;
+    width: 9.5em;
+    z-index: 1;
+  }
+  .left-bottom-circle {
+    position: absolute;
+    top: 193px;
+    left: -26px;
+    width: 2.5em;
+    z-index: 6;
+  }
+  .right-bottom-star {
+    position: absolute;
+    top: 253px;
+    right: -64px;
+    width: 2.5em;
+  }
+  .blurred-fx {
+    filter: blur(11px);
+    opacity: 0.5;
+    border-radius: 0.8em;
+    background: #ffffff;
+    padding-top: 4em;
+    position: absolute;
+    top: 0;
+    width: 300px;
+    height: 314px;
+    z-index: 2;
+  }
+}

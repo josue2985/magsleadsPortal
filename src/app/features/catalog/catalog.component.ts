@@ -12,6 +12,7 @@ import { ViewportScroller } from '@angular/common';
 export class CatalogComponent implements OnInit {
 
   calculators: ICalcs[];
+  cardColor: any;
 
   constructor(
     private route: ActivatedRoute,
@@ -31,5 +32,4 @@ export class CatalogComponent implements OnInit {
       }
     });
   }
-
 }

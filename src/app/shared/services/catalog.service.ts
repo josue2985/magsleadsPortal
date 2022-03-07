@@ -37,6 +37,9 @@ export interface ICalcs {
   path: string;
   src: string;
   headline: string;
+  itemHeadline: string;
+  titleDefinition: string;
+  definition: string;
   byline: string;
   author: string;
   date: string;

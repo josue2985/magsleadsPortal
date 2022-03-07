@@ -6,6 +6,15 @@
 .text-center {
   text-align: center;
 }
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
+}
+.v-align-top {
+  vertical-align: top;
+}
 .m-t-10 {
   margin-top: 10em;
 }
@@ -14,12 +23,31 @@
   margin-top: 5em;
 }
 
+.m-t-2 {
+  margin-top: 2em;
+}
+
+.m-t-1 {
+  margin-top: 1em;
+}
+
+.m-b-0 {
+  margin-bottom: 0em;
+}
+
 .m-b-1 {
   margin-bottom: 1em;
 }
 
+.m-b-2 {
+  margin-bottom: 2em;
+}
+
 .m-b-5 {
   margin-bottom: 5em;
+}
+.m-b-10 {
+  margin-bottom: 10em;
 }
 
 .m-r-1 {
@@ -36,6 +64,9 @@
 .yellow {
   color:map-get($theme-colors, 'yellow');
 }
+.blue {
+  color:map-get($theme-colors, 'primary');
+}
 
 .shadowtxt {
   text-shadow: 3px 2px 4px #00000073;
@@ -45,6 +76,18 @@
 }
 .w-100 {
   width:100%;
+}
+
+.shadow-boxes {
+  box-shadow: 0 12px 24px 1px #d4e0ec;
+}
+
+.shadow-calculator {
+  box-shadow: 3px 3px 8px 0 rgb(0 0 0 / 8%);
+}
+
+.box-border-radius {
+  border-radius: $border-radius-boxes;
 }
 
 

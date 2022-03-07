@@ -1,0 +1,40 @@
+@import "../abstracts/variables";
+
+table {
+  border: 1px solid #ddd;
+  thead {
+    tr {
+      th {
+        border-bottom: 2px solid #ddd;
+        padding: 15px 2px;
+        color: map-get($theme-colors, "black");
+        font-size: 1em;
+      }
+    }
+  }
+  tbody {
+    tr {
+      &:not(:last-child) {
+        border: 1px solid #ddd;
+      }
+      td {
+        font-size: 1.25em;
+        color: map-get($theme-colors, "gray");
+        line-height: 1.8;
+        padding: 30px 2px;
+      }
+    }
+  }
+  th,
+  td {
+    &:first-child {
+      padding-left: 15px;
+    }
+  }
+  th,
+  td {
+    &:last-child {
+      padding-right: 15px;
+    }
+  }
+}

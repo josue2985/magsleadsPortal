@@ -1,12 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@font-face {
+  font-family: "ES-Build";
+  src: url("../fonts/ES-Build-SemiBold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Matter";
+  src: url("../fonts/Matter-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Matter";
+  src: url("../fonts/Matter-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Matter";
+  src: url("../fonts/Matter-SemiBold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
 
 // module imports
 
-@import 'abstracts/module';
-@import 'base/module';
-@import 'components/module';
-
+@import "abstracts/module";
+@import "base/module";
+@import "components/module";
 
 body.bg-light-blue {
-    background: #BCDEFF;
+  background: #bcdeff;
 }

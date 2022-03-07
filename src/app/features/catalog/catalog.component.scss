@@ -1,0 +1,96 @@
+@import "../../../assets/scss/abstracts/colors";
+@import "../../../assets/scss/abstracts/variables";
+
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-gap: 4rem;
+  .card {
+    background-color: map-get($theme-colors, "white");
+    border-radius: $border-radius-boxes;
+    padding: 0.6em;
+    cursor: pointer;
+    transition: $btn-transitions;
+    &:hover {
+      box-shadow: 0px 25px 38px 10px #dddd;
+      .body-card {
+        h3 {
+          color: map-get($theme-colors, "primary");
+        }
+      }
+    }
+  }
+  .image-container {
+    display: flex;
+    flex-direction: column;
+    height: 17em;
+    border-radius: $border-radius-boxes;
+    position: relative;
+    &.calculadora-imc {
+      background: map-get($theme-colors, $key: calc-imc);
+    }
+    &.calculadora-peso-ideal {
+      background: map-get($theme-colors, $key: calc-ideal);
+    }
+    &.calculadora-agua {
+      background: map-get($theme-colors, $key: calc-agua);
+    }
+    &.presupuesto-app {
+      background: map-get($theme-colors, $key: calc-app);
+    }
+    &.presupuesto-web {
+      background: map-get($theme-colors, $key: calc-web);
+    }
+    &.presupuesto-iva {
+      background: map-get($theme-colors, $key: calc-taxes);
+    }
+    .reactions {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 100%;
+      position: absolute;
+      grid-gap: 1em;
+      top: 0.5em;
+      right: 1em;
+      font-size: 1.15em;
+      .likes {
+        &::before {
+          display: inline-block;
+          content: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg viewBox='0 0 30.593 28.048' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath transform='translate(-4.999 -8.744)' d='M20.833,36.436a.592.592,0,0,1-1.076.021,16.558,16.558,0,0,0-6.669-7.033c-4.671-2.585-7.563-6.734-8.035-11.087-.426-3.942,1.581-8.782,8.035-9.531a6.675,6.675,0,0,1,6.72,2.936.6.6,0,0,0,1,.011A6.822,6.822,0,0,1,27.5,8.806c6.452.749,8.459,5.589,8.035,9.531-.47,4.353-3.363,8.5-8.035,11.087a16.458,16.458,0,0,0-6.669,7.012Z' fill='%23cf4054' fill-rule='evenodd'/%3E%3C/svg%3E%0A");
+          background-size: 15px 15px;
+          height: 15px;
+          width: 15px;
+        }
+      }
+      .views {
+        &::before {
+          display: inline-block;
+          content: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg viewBox='0 0 34.23 26.624' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath transform='translate(-3 -5)' d='M20.115,5C12.457,5,5.883,10.479,3,18.312c2.883,7.833,9.457,13.312,17.115,13.312S34.347,26.145,37.23,18.312C34.347,10.479,27.773,5,20.115,5Z' fill='%239ba4b4' data-name='Path 27'/%3E%3Cellipse transform='translate(11.387 7.302)' cx='5.85' cy='5.85' rx='5.85' ry='5.85' fill='%23495b7a' data-name='Ellipse 1'/%3E%3C/svg%3E%0A");
+          background-size: 15px 15px;
+          height: 15px;
+          width: 15px;
+        }
+      }
+    }
+    .pic {
+      height: 100%;
+      // background: yellow;
+      display: flex;
+      justify-content: center;
+      img {
+        width: 7em;
+      }
+    }
+  }
+  .body-card {
+    padding: 0 0.7em;
+    h3 {
+      transition: $btn-transitions;
+      font-size: 1.4em;
+    }
+    p {
+      line-height: 1.2;
+    }
+  }
+}

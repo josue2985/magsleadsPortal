@@ -5,6 +5,9 @@
   // background: linear-gradient(180deg, #ffffff 72%, #c0ccd7 100%);
   padding-top: 2em;
   margin-top: 2em;
+  .icon.logo-magnet {
+    cursor: pointer;
+  }
   .content {
     display: grid;
     grid-template-columns: 40% repeat(2, 10%) auto;
