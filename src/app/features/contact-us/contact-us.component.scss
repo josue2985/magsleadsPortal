@@ -92,7 +92,7 @@
       button {
         display: flex;
       }
-      input.btn-submit {
+      button.btn-submit {
         cursor: pointer;
         background: map-get($theme-colors, "yellow");
         color: map-get($theme-colors, "black" );
@@ -107,6 +107,7 @@
         min-width: 30%;
         margin-top: 3em;
         transition: all 240ms ease-out;
+        padding: 10px 10px;
         &:hover {
           background: lighten(#ffa400, 10%);
         }
