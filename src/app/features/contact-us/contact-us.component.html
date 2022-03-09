@@ -84,7 +84,7 @@
 
 <div class="confirmation-modal" *ngIf="status == 200">
   <div class="title-header">
-    <h6>Thank you for Contacting Us!</h6>
+    <h6>Gracias por tu mensaje!</h6>
   </div>
   <div class="content">
     <div class="check">
@@ -111,10 +111,43 @@
       </svg>
     </div>
     <h6>
-      Thank you for submitting your email. An SeeYa! customer representative
-      will respond to you shortly.
+      Estamos ansiosos de ayudarte a convertir mas Clientes, en breve nos contactaremos.
     </h6>
   </div>
-  <button class="btn" (click)="onDismiss()">Close</button>
+  <button class="btn" (click)="onDismiss()">Listo!</button>
 </div>
-<div class="background-modal" *ngIf="status == 200"></div>
+<div class="confirmation-modal" *ngIf="status == 503">
+  <div class="title-header">
+    <h6>UPS! Esto salió mal</h6>
+  </div>
+  <div class="content">
+    <div class="check">
+      <svg
+        width="100"
+        height="100"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:svg="http://www.w3.org/2000/svg"
+      >
+        <g>
+          <g id="svg_1">
+            <path
+              id="svg_2"
+              class="envelope"
+              d="m5.6914,8l44.309,34.465l44.312,-34.465l-88.621,0zm-2.6953,2.9766l0,65.023c0,1.1055 0.89844,2.0039 2.0039,2l39.668,0c-0.42969,-1.7656 -0.66406,-3.6055 -0.66406,-5.5c0,-12.906 10.59,-23.504 23.496,-23.504s23.496,10.598 23.496,23.504c0,1.8945 -0.23438,3.7344 -0.66406,5.5l4.6641,0c1.1055,0 2,-0.89453 2,-2l0,-65.016l-45.766,35.594c-0.72266,0.5625 -1.7344,0.5625 -2.4609,0l-45.77298,-35.601z"
+            />
+            <path
+              id="svg_3"
+              class="check"
+              d="m67.5,53c-10.746,0 -19.504,8.7578 -19.504,19.5c0,10.746 8.7578,19.496 19.504,19.496s19.504,-8.75 19.504,-19.496c0,-10.742 -8.7578,-19.5 -19.504,-19.5zm8.457,12.984c0.82422,-0.02344 1.582,0.46094 1.9023,1.2188s0.14453,1.6367 -0.44531,2.2109l-10.004,9.9961c-0.77734,0.78125 -2.0469,0.78125 -2.8281,0l-4.9961,-4.9961c-0.39453,-0.37109 -0.625,-0.88672 -0.63281,-1.4258c-0.00781,-0.54297 0.20312,-1.0664 0.58594,-1.4492c0.38281,-0.38281 0.90625,-0.59375 1.4492,-0.58594c0.53906,0.01172 1.0547,0.23828 1.4258,0.63281l3.5781,3.582l8.5938,-8.5859c0.36328,-0.37109 0.85547,-0.58203 1.3711,-0.59766l0.00008,-0.00001z"
+            />
+          </g>
+        </g>
+      </svg>
+    </div>
+    <h6>
+      Hubo un problema enviado el formulario por favor contactanos al (+593) 99 624 1685 o vuelve a intentarlo en un momento.
+    </h6>
+  </div>
+  <button class="btn" (click)="onDismiss()">Listo!</button>
+</div>
+<div class="background-modal" *ngIf="status == 200 || status == 503"></div>
