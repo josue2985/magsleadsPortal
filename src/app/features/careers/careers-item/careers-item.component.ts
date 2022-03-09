@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, PLATFORM_ID, Inject } from '@angular/core';
 import { ICareers, CareersService } from '../../../shared/services/careers.service';
 import { ActivatedRoute, Router } from '@angular/router';
-
+import { isPlatformBrowser } from '@angular/common';
 @Component({
   selector: 'app-careers-item',
   templateUrl: './careers-item.component.html',
@@ -16,7 +16,8 @@ export class CareersItemComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private careersService: CareersService
+    private careersService: CareersService,
+    @Inject(PLATFORM_ID) private platformId: any
   ) { }
 
   ngOnInit(): void {
@@ -36,7 +37,9 @@ export class CareersItemComponent implements OnInit {
   }
 
   onApply(): void {
-    window.location.href = 'mailto: info@seeyamobile.com?subject=' + this.career.position + ' Job Inquiry';
+    if (isPlatformBrowser(this.platformId)) { 
+      window.location.href = 'mailto: info@seeyamobile.com?subject=' + this.career.position + ' Job Inquiry';
+    }
   }
 
 }

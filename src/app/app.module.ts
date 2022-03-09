@@ -69,7 +69,7 @@ import { TooltipModule } from 'ng2-tooltip-directive';
     MaxLengthDirective
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,

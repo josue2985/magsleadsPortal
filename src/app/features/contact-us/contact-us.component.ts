@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, PLATFORM_ID, Inject } from '@angular/core';
 import { environment } from '../../../environments/environment';
 import { Router, ActivatedRoute } from '@angular/router';
+import { isPlatformBrowser } from '@angular/common';
 @Component({
   selector: 'app-contact-us',
   templateUrl: './contact-us.component.html',
@@ -13,7 +14,8 @@ export class ContactUsComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private Activatedroute: ActivatedRoute
+    private Activatedroute: ActivatedRoute,
+    @Inject(PLATFORM_ID) private platformId: any
   ) { }
 
   ngOnInit(): void {
@@ -24,17 +26,19 @@ export class ContactUsComponent implements OnInit {
         this.status = +params.get('status') || 0;
     });
 
-    if (this.status === 200) {
+    if (this.status === 200 && isPlatformBrowser(this.platformId)) {
       const body = document.getElementById('body');
       body?.classList.add('no-scroll');
     }
   }
 
   onDismiss(): void {
-    this.router.navigate(['/contactus']);
-    const body = document.getElementById('body');
-    if (body?.classList.contains('no-scroll')) {
-      body?.classList.remove('no-scroll');
+    if (isPlatformBrowser(this.platformId)) {
+      this.router.navigate(['/contactus']);
+      const body = document.getElementById('body');
+      if (body?.classList.contains('no-scroll')) {
+        body?.classList.remove('no-scroll');
+      }
     }
   }
 

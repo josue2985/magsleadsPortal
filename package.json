@@ -7,7 +7,12 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "host-test": "http-server -p 8081 -c-1 dist/magsleads/browser",
+    "e2e": "ng e2e",
+    "dev:ssr": "ng run magsleads:serve-ssr",
+    "serve:ssr": "node dist/magsleads/server/main.js",
+    "build:ssr": "ng build --prod && ng run magsleads:server:production",
+    "prerender": "ng run magsleads:prerender"
   },
   "private": true,
   "dependencies": {
@@ -18,7 +23,10 @@
     "@angular/forms": "~11.2.9",
     "@angular/platform-browser": "~11.2.9",
     "@angular/platform-browser-dynamic": "~11.2.9",
+    "@angular/platform-server": "~11.2.9",
     "@angular/router": "~11.2.9",
+    "@nguniversal/express-engine": "^11.2.1",
+    "express": "^4.15.2",
     "ng2-tooltip-directive": "2.9.22",
     "npm": "^8.3.1",
     "rxjs": "~6.6.0",
@@ -29,6 +37,8 @@
     "@angular-devkit/build-angular": "~0.1102.8",
     "@angular/cli": "~11.2.8",
     "@angular/compiler-cli": "~11.2.9",
+    "@nguniversal/builders": "^11.2.1",
+    "@types/express": "^4.17.0",
     "@types/jasmine": "~3.6.0",
     "@types/lodash": "^4.14.176",
     "@types/node": "^12.11.1",

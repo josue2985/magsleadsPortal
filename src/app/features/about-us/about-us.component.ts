@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, PLATFORM_ID, Inject } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 @Component({
   selector: 'app-about-us',
   templateUrl: './about-us.component.html',
@@ -9,11 +9,13 @@ export class AboutUsComponent implements OnInit {
 
   sectionTitle!: string;
 
-  constructor() { }
+  constructor(@Inject(PLATFORM_ID) private platformId: any) { }
 
   ngOnInit(): void {
-    window.scrollTo(0, 0);
-    this.sectionTitle = 'About Us';
+    if (isPlatformBrowser(this.platformId)) {
+      window.scrollTo(0, 0);
+      this.sectionTitle = 'About Us';
+    }
   }
 
 }
