@@ -4,7 +4,7 @@
       <div class="grid__row">
         <!-- SEXO -->
         <div class="grid__row--field">
-          <label class="section-title">1. Cual es tu sexo?</label>
+          <label class="section-title">1. Cuál es tu sexo?</label>
           <div class="input-container age dflex">
             <div>
               <input type="radio" id="cb1" name="gender"
@@ -27,7 +27,7 @@
         <!-- ANIOS -->
         <div class="grid__row--field">
           <label for="sexo" class="section-title"
-            >1. Cuantos años tienes?</label
+            >2. Cuántos años tienes?</label
           >
           <div class="input-container anios dflex align-items-center">
 
@@ -52,7 +52,7 @@
         </div>
         <!-- TALLA -->
         <div class="grid__row--field mt-2">
-          <label class="section-title" for="alto">Cuanto mides</label>
+          <label class="section-title" for="alto">3. Cuánto mides?</label>
           <div class="input-container height dflex align-items-center">
             <div class="input-field" *ngIf="!isMeters">
               <input
@@ -116,7 +116,7 @@
         </div>
         <!-- PESO -->
         <div class="grid__row--field mt-2">
-          <label for="peso" class="section-title">Cuanto pesas</label>
+          <label for="peso" class="section-title">4. Cuánto pesas?</label>
           <div class="input-container weight dflex align-items-center">
             <!-- <div class="slidecontainer">
               <input
@@ -177,7 +177,7 @@
           </div>
         </div>
       </div>
-      <div class="dflex flex-direction-col mt-4">
+      <div class="dflex flex-direction-col mt-4 feedback-box">
         <div class="actionsBox">
           <button class="btn normal" (click)="onSubmit()">
             <a>Calcular mi IMC</a>
@@ -188,19 +188,26 @@
           <div class="imc">
             <div>Tu IMC personal</div>
             <div class="imc-results">
-              {{ imc | number: "2.1-1" }}-{{ imcLabel }}
+              {{ imc | number: "2.1-1" }} - 
+              <span *ngIf="this.imcLabel === 'Obesidad Extrema'">Obesidad Extrema</span>
+              <span *ngIf="this.imcLabel === 'Obesidad'">Obesidad</span>
+              <span *ngIf="this.imcLabel === 'Sobrepeso'">Exceso de Peso</span>
+              <span *ngIf="this.imcLabel === 'Peso Normal'">Normal</span>
+              <span *ngIf="this.imcLabel === 'Bajo Peso'">Bajo Peso</span>
             </div>
           </div>
           <div class="actual-weight">
             <div>Tu peso actual</div>
             <div class="actual-weight-results">
               {{ imcCalculator.value.pesoKilo || imcCalculator.value.pesoLibs }}
+              <span *ngIf="this.isKilos">Kg</span>
+              <span *ngIf="!this.isKilos">Lb</span>
             </div>
           </div>
-          <div class="range-ideal-weight">
+          <!-- <div class="range-ideal-weight">
             <div>Tu rango de peso ideal</div>
             <div class="range-ideal-weight-results">45kg - 80kg</div>
-          </div>
+          </div> -->
         </div>
         <div *ngIf="errorsMessage && imcCalculator.invalid" class="errors">
           <p *ngIf="imcCalculator.get('ageInput')?.invalid">Falta completar Años</p>

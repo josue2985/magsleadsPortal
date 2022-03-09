@@ -1,6 +1,7 @@
 <div class="grid-cards">
-  <div [routerLink]="['/calculadora' , calc.name]" class="card" *ngFor="let calc of calculators">
+  <div [routerLink]="['/calculadora' , calc.name]" class="card" *ngFor="let calc of calculators" [class.disabled]="calc.isPrivate ? 'disabled': ''">
     <div class="image-container {{calc.name}}" >
+      <div *ngIf="calc.isPrivate" class="in-progress">In Progress</div>
       <div class="reactions">
         <div class="likes">
           {{ this.calc?.countLikes }}
@@ -20,3 +21,5 @@
     <br>
   </div>
 </div>
+
+

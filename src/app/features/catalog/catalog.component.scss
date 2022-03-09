@@ -26,6 +26,19 @@
     height: 17em;
     border-radius: $border-radius-boxes;
     position: relative;
+    overflow: hidden;
+    .in-progress {
+      position: absolute;
+      transform: rotate(317deg);
+      top: 25px;
+      left: -24px;
+      background: #fec724;
+      padding: 4px 19px;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: .9em;
+      transition: $btn-transitions;
+    }
     &.calculadora-imc {
       background: map-get($theme-colors, $key: calc-imc);
     }
@@ -91,6 +104,22 @@
     }
     p {
       line-height: 1.2;
+    }
+  }
+}
+
+.disabled {
+  cursor: not-allowed !important;
+  pointer-events: none;
+}
+
+.card.disabled {
+  .image-container {
+    background: #ddd; 
+    .pic {
+      img {
+        filter: grayscale(1);
+      }
     }
   }
 }

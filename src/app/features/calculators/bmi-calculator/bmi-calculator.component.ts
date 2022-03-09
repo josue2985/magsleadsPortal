@@ -48,6 +48,8 @@ export class BmiCalculatorComponent implements OnInit {
   resetTheForm(): void {
     this.imcCalculator.reset();
     this.errorsMessage = false;
+    this.imc = -1;
+    this.imcLabel = '';
   }
 
   // onKeyUpAge() {
@@ -64,7 +66,7 @@ export class BmiCalculatorComponent implements OnInit {
       this.imcCalculator.get('altoCm')?.clearValidators();
       this.imcCalculator.get('altoCm')?.updateValueAndValidity();
     }
-    console.log(this.imcCalculator.get('altoCm'));
+    // console.log(this.imcCalculator.get('altoCm'));
 
   }
 
@@ -76,7 +78,7 @@ export class BmiCalculatorComponent implements OnInit {
       this.imcCalculator.get('altoMeters')?.clearValidators();
       this.imcCalculator.get('altoMeters')?.updateValueAndValidity();
     }
-    console.log(this.imcCalculator.get('altoMeters'));
+    // console.log(this.imcCalculator.get('altoMeters'));
   }
 
   // Toogle cm to m
