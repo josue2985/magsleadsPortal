@@ -1,8 +1,9 @@
 import * as _ from 'lodash';
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, PLATFORM_ID, Inject } from '@angular/core';
 import { ICareers, CareersService } from '../../shared/services/careers.service';
 import { ActivatedRoute } from '@angular/router';
 import { ViewportScroller } from '@angular/common';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-careers',
@@ -18,7 +19,8 @@ export class CareersComponent implements OnInit, AfterViewInit {
   constructor(
     private careersService: CareersService,
     private route: ActivatedRoute,
-    private viewportScroller: ViewportScroller
+    private viewportScroller: ViewportScroller,
+    @Inject(PLATFORM_ID) private platformId: any
   ) { }
 
   ngOnInit(): void {
@@ -37,7 +39,9 @@ export class CareersComponent implements OnInit, AfterViewInit {
   }
 
   onApply(position: string): void {
-    window.location.href = 'mailto: info@seeyamobile.com?subject=' + position + ' Job Inquiry';
+    if (isPlatformBrowser(this.platformId)) {
+      window.location.href = 'mailto: info@seeyamobile.com?subject=' + position + ' Job Inquiry';
+    }
   }
 
   ngAfterViewInit(): void {

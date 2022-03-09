@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, PLATFORM_ID, Inject } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 @Component({
   selector: 'app-privacy-policy',
   templateUrl: './privacy-policy.component.html',
@@ -8,11 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class PrivacyPolicyComponent implements OnInit {
   sectionTitle: string;
 
-  constructor() { }
+  constructor(@Inject(PLATFORM_ID) private platformId: any) { }
 
   ngOnInit(): void {
-    window.scrollTo(0, 0);
-    this.sectionTitle = 'Politicas de Privacidad';
+    if (isPlatformBrowser(this.platformId)) {
+      window.scrollTo(0, 0);
+      this.sectionTitle = 'Politicas de Privacidad';
+    }
   }
 
 }
