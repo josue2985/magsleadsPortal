@@ -17,7 +17,7 @@ export class ContactUsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.sectionTitle = 'Contact Us';
+    this.sectionTitle = 'Crear un Magnet Lead';
 
     this.Activatedroute.queryParamMap
     .subscribe((params: any) => {

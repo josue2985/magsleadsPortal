@@ -40,6 +40,7 @@ import { MaxLengthDirective } from './shared/directive/max-length.directive';
 import { BmiExplanationComponent } from '@features/calculators/bmi-explanation/bmi-explanation.component';
 import { CtaCatalogItemsComponent } from './shared/components/cta-catalog-items/cta-catalog-items.component';
 
+import { TooltipModule } from 'ng2-tooltip-directive';
 
 @NgModule({
   declarations: [
@@ -73,7 +74,8 @@ import { CtaCatalogItemsComponent } from './shared/components/cta-catalog-items/
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    TooltipModule
   ],
   providers: [
     CareersService,

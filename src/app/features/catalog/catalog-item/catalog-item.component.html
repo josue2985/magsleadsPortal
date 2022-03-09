@@ -1,57 +1,59 @@
-<section class="header-item sides-padding {{ headerColor }}">
-  <div class="col1">
-    <button (click)="onBack()" class="white m-b-2">
-      <i class="fa-solid fa-chevron-left"></i>Calculadoras
-    </button>
-    <h2 class="m-b-0">{{ this.calculator?.itemHeadline }}</h2>
-    <p>{{ this.calculator?.byline }}</p>
-  </div>
-  <div class="col2">
-    <div class="box-item shadow-calculator">
-      <div class="icon-header">
-        <img [src]="this.calculator?.src" [alt]="this.calculator?.name" />
+<section class="{{ headerColor }}">
+  <div class="header-item sides-padding">
+    <div class="col1">
+      <button (click)="onBack()" class="white m-b-2">
+        <i class="fa-solid fa-chevron-left"></i>Calculadoras
+      </button>
+      <h2 class="m-b-0">{{ this.calculator?.itemHeadline }}</h2>
+      <p>{{ this.calculator?.byline }}</p>
+    </div>
+    <div class="col2">
+      <div class="box-item shadow-calculator">
+        <div class="icon-header">
+          <img [src]="this.calculator?.src" [alt]="this.calculator?.name" />
+        </div>
+        <div class="box-content">
+          <div class="reactions">
+            <div class="likes">
+              {{ this.calculator?.countLikes }}
+            </div>
+            <div class="views">
+              {{ this.calculator?.countViews }}
+            </div>
+          </div>
+          <div class="share-options">
+            <div>Compatir</div>
+            <div class="social-icons">
+              <ul>
+                <li>
+                  <i class="icon icon-facebook"></i>
+                </li>
+                <li><i class="icon icon-tw"></i></li>
+                <li><i class="icon icon-email"></i></li>
+                <li><i class="icon icon-ws"></i></li>
+              </ul>
+            </div>
+          </div>
+          <div class="actions-buttons">
+            <button class="outline">Embeber en mi proyecto</button>
+            <button class="normal" routerLink="/contactus">Solicitar Customizacion</button>
+          </div>
+        </div>
       </div>
-      <div class="box-content">
-        <div class="reactions">
-          <div class="likes">
-            {{ this.calculator?.countLikes }}
-          </div>
-          <div class="views">
-            {{ this.calculator?.countViews }}
-          </div>
-        </div>
-        <div class="share-options">
-          <div>Compatir</div>
-          <div class="social-icons">
-            <ul>
-              <li>
-                <i class="icon icon-facebook"></i>
-              </li>
-              <li><i class="icon icon-tw"></i></li>
-              <li><i class="icon icon-email"></i></li>
-              <li><i class="icon icon-ws"></i></li>
-            </ul>
-          </div>
-        </div>
-        <div class="actions-buttons">
-          <button class="outline">Embeber en mi proyecto</button>
-          <button class="normal">Solicitar Customizacion</button>
-        </div>
+      <div class="left-top-star move-up-down ">
+        <img class="follow-mouse" src="../../../../assets/img/3d-elements/catalog-items/star1.svg" alt="Star 3d">
       </div>
+      <div class="right-top-circle move-down-up">
+        <img class="follow-mouse" src="../../../../assets/img/3d-elements/catalog-items/circle-blue-large.svg" alt="Circle 3d">
+      </div>
+      <div class="left-bottom-circle move-down-up">
+        <img class="follow-mouse" src="../../../../assets/img/3d-elements/catalog-items/circle-yellow-sm.svg" alt="Circle 3d">
+      </div>
+      <div class="right-bottom-star move-up-down">
+        <img class="follow-mouse" src="../../../../assets/img/3d-elements/catalog-items/star2.svg" alt="Star 3d">
+      </div>
+      <div class="blurred-fx"></div>
     </div>
-    <div class="left-top-star move-up-down ">
-      <img class="follow-mouse" src="../../../../assets/img/3d-elements/catalog-items/star1.svg" alt="Star 3d">
-    </div>
-    <div class="right-top-circle move-down-up">
-      <img class="follow-mouse" src="../../../../assets/img/3d-elements/catalog-items/circle-blue-large.svg" alt="Circle 3d">
-    </div>
-    <div class="left-bottom-circle move-down-up">
-      <img class="follow-mouse" src="../../../../assets/img/3d-elements/catalog-items/circle-yellow-sm.svg" alt="Circle 3d">
-    </div>
-    <div class="right-bottom-star move-up-down">
-      <img class="follow-mouse" src="../../../../assets/img/3d-elements/catalog-items/star2.svg" alt="Star 3d">
-    </div>
-    <div class="blurred-fx"></div>
   </div>
 </section>
 <div class="sides-padding">

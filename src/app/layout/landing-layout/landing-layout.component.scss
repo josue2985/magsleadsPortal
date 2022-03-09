@@ -24,3 +24,12 @@
   grid-area: content;
   grid-row-start:1 ;
 }
+
+@media screen and (max-width: 500px) /* Mobile */ { 
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+
+}

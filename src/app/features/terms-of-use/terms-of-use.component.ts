@@ -12,7 +12,7 @@ export class TermsOfUseComponent implements OnInit {
 
   ngOnInit(): void {
     window.scrollTo(0, 0);
-    this.sectionTitle = 'Terms of Use';
+    this.sectionTitle = 'Términos de Uso';
   }
 
 }

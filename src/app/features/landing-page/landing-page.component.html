@@ -3,15 +3,10 @@
     <nav class="navigation__container sides-padding fade-in-navigation">
       <div class="logo">
         <i class="icon logo-magnet" routerLink="/"></i>
-        <button class="btn-login-mobile"><a href="#">Login</a></button>
+        <button class="outline m-t-2 btn-login-mobile" routerLink="/contactus">Crear Lead Magnet</button>
       </div>
       <div class="menu desktop">
-        <!-- <ul>
-          <li>
-            <a routerLink="/about-us" routerLinkActive="active">About Us</a>
-          </li>
-        </ul> -->
-        <button class="btn outline">Crear una calculadora</button>
+        <button class="btn outline" routerLink="/contactus">Crear Lead Magnet</button>
       </div>
       <!-- <div class="menu mobile">
         <button>
@@ -56,7 +51,7 @@
     <div class="header">
      <!-- call to action -->
       <section class="hero-content">
-        <div class="bg-picture">
+        <div class="bg-picture sides-padding">
           <div class="info">
             <h1>Convierte Clicks<br> en Clientes!</h1>
             <div class="features-box">
@@ -101,7 +96,7 @@
           </div>
           <div class="bg-elements left-element circle-blue move-down-up">
             <img src="../../../assets/img/landing-page/hero/circle-blue.png" alt="">
-          </div>
+          </div> 
           <!-- Right Elements -->
           <div class="bg-elements right-element ideal-3d move-down-up">
             <img class="follow-mouse" src="../../../assets/img/landing-page/hero/ideal-weight-3d-icon.png" alt="calcular agua para tomar">
@@ -162,11 +157,13 @@
       </div>
     </section> -->
     <!-- cards calculator -->
-    <section class="cards-calculators sides-padding">
-      <div class="emoji-3d emoji3d-move-down-up">
-        <img src="../../../assets/img/landing-page/emoji-pencil.png" alt="">
+    <section class="catalog-background">
+      <div class="cards-calculators sides-padding">
+        <div class="emoji-3d emoji3d-move-down-up">
+          <img src="../../../assets/img/landing-page/emoji-pencil.png" alt="">
+        </div>
+        <app-catalog></app-catalog>
       </div>
-      <app-catalog></app-catalog>
     </section>
     <!-- description 1 -->
     <section class="description-1">
@@ -185,21 +182,26 @@
         </div>
         <div class="top-layer bottom-icon move-down-up">
           <img class="follow-mouse" src="../../../assets/img/landing-page/feature1/bottom-left.png" alt="">
-        </div>
+        </div> 
 
        <img class="bg-layer" src="../../../assets/img/landing-page/feature1/bg-image.png" alt="">
       </div>
       <div class="wording sides-padding">
         <h2>
-          <span class="blue">Experiencias</span> que atrapan.
+          <span class="blue text-big">200%</span> más conversiones!
         </h2>
         <p>
-          Empieza la relacion con tus visitantes con el pie derecho integrando nuestros mags y genera valor dentro de tu publico objetivo.
-          <strong> En promedio nuestros mags ayudan a landing pages como el tuyo a convertir entre un 20% - 40% más.</strong>
+          Empieza la relación con tus visitantes con el pie derecho! Integrando  
+          <span 
+          tooltip="<strong>Mags</strong> son magnetic leads que harán volar tus ventas. 🚀" 
+          placement="top" showDelay="500">mags</span> generarás verdadero valor al público que buscas llegar y ellos volveran, Garantizado!
+          <strong> Nuestros <span 
+            tooltip="<strong>Mags</strong> son magnetic leads que harán volar tus ventas. 🚀" 
+            placement="top" showDelay="500">mags</span> ayudan a Landing Pages como el tuyo a convertir entre un 200% y 300% más que con aburridos forms.</strong>
         </p>
-        <div class="cta text-left m-t-5">
+        <div class="cta m-t-5">
           <button class="arrow-btn">
-            <a class="arrow text-bold">Empieza gratis</a>
+            <a class="arrow text-bold">Quiero una demostración</a>
           </button>
         </div>
       </div>
@@ -208,17 +210,14 @@
     <section class="description-2 m-t-5">
       <div class="wording sides-padding">
         <h2>
-          <span class="blue">Empieza</span> con el pie derecho.
+          <span class="blue">Integralos</span> con rapidez.
         </h2>
         <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          Lorem Ipsum has been the industry’s standard. Lorem Ipsum is simply dummy
-          text of the printing and typesetting industry. Lorem Ipsum has been the
-          industry’s standard.
+          Puedes embeber en tu sitio web desde nuestro catalogo de Mags (Completamente gratis) o si prefieres te comunicas y lo haremos por ti, sin problema!
         </p>
-        <div class="cta text-left m-t-5">
+        <div class="cta m-t-5">
           <button class="arrow-btn">
-            <a class="arrow text-bold">Schedule a Demo</a>
+            <a class="arrow text-bold">Hazlo por mi!</a>
           </button>
         </div>
       </div>
@@ -226,12 +225,12 @@
         <div class="top-layer bulb-light move-up-down">
           <img class="follow-mouse" src="../../../assets/img/landing-page/feature2/bulb-light.png" alt="">
         </div>
-        <div class="top-layer emoji move-down-up">
+       <!--  <div class="top-layer emoji move-down-up">
           <img class="follow-mouse" src="../../../assets/img/landing-page/feature2/emoji-inlove.png" alt="">
         </div>
         <div class="top-layer hand-icon move-up-down">
           <img class="follow-mouse" src="../../../assets/img/landing-page/feature2/handicon.png" alt="">
-        </div>
+        </div> -->
 
        <img class="bg-layer" src="../../../assets/img/landing-page/feature2/bg-picture.png" alt="">
       </div>

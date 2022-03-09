@@ -486,3 +486,39 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield; /* Firefox */
 }
+
+
+@media screen and (max-width: 500px) /* Mobile */ { 
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    .grid__col1 {
+      border-right: 0px;
+      margin-right: 0px;
+      padding-right: 0px;
+    }
+    .grid__col2 {
+      display: none;
+    }
+  }
+  .calculator__container {
+    padding: 1.5em;
+  }
+  .grid__row {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 0em;
+    grid-row-gap: 0.2em;
+  }
+  form.calculator {
+    .grid__row--field {
+      .input-container {
+        &.age {
+          transform: scale(.8) translate(-38px, 10px);
+         }
+      }
+    }
+  }
+}

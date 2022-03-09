@@ -56,3 +56,14 @@
   0% { transform: translate(0px, -15px); }
   100% { transform: translate(0px, 0px); }
 }
+
+@media screen and (max-width: 500px) /* Mobile */ { 
+
+  .move-up-down {
+    animation: up 4s ease-in infinite  alternate;
+  }
+
+  .move-down-up {
+    animation: down 4s ease-in infinite  alternate;
+  }
+}

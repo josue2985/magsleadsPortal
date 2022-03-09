@@ -4,49 +4,17 @@
     "banner": "products/portal/img/careers/computer_programmer_med.jpg",
     "path": "react-native-developer",
     "descriptionShort": "React Native Developer",
-    "description": "CrashPal! Mobile is seeking exceptional React Native developers to join our family. As a React Native developer you will play a critical role in the development, design and support of SeeYa’s portfolio of iOS and Android mobile applications that impact our industry. ",
-    "requirementsShort": "SeeYa! Mobile is seeking exceptional React Native developers to join our family.",
+    "description": "En MagsLeads queremos mejorar la vida con tecnología, por lo que nos encontramos en la búsqueda de un Desarrollador Fullstack React Native / Node JS para sumar a nuestro equipo con ganas de aprender las mejores prácticas para desempeñarse en un proyecto cloud native con tecnologías modernas. ",
+    "requirementsShort": "En MagsLeads buscamos desarrolladores excepcionales para unirse a nuestra familia",
     "requirementColumns": [
       {
         "items": [
           {
-            "title": "Required Skills",
+            "title": "Responsabilidades",
             "subtitle": "",
             "content": [
               {
-                "item": "3 to 5 years of professional experience as hands-on Front End Engineer on Android/iOS",
-                "subItem":""
-              },
-              {
-                "item": "Expert in Android/iOS Mobile App Development with React Native technologies",
-                "subItem":""
-              },
-              {
-                "item": "3 years of experience in JavaScript, TypeScript and React/Redux",
-                "subItem":""
-              },
-              {
-                "item": "2 Experience with Firebase and NoSql Database utilization",
-                "subItem":""
-              },
-              {
-                "item": "Experience with third-party libraries and APIs",
-                "subItem":""
-              },
-              {
-                "item": "Superior analytical skills with a good problem-solving attitude",
-                "subItem":""
-              },
-              {
-                "item": "Ability to perform in a team environment",
-                "subItem":""
-              },
-              {
-                "item": "Strong oral and written communication skills",
-                "subItem":""
-              },
-              {
-                "item": "Ability to interpret and follow technical plans",
+                "item": "Diseño, desarrollo y pruebas unitarias .",
                 "subItem":""
               }
             ]
@@ -56,45 +24,29 @@
       {
         "items": [
           {
-            "title": "Essential Duties and Responsibilities",
+            "title": "Requisitos Principales",
             "subtitle": "",
             "content": [
               {
-                "item": "Work with product and design teams to help bring the features on our mobile development roadmap to life",
+                "item": "Experiencia sólida en React Native , React (Mobile)",
                 "subItem":""
               },
               {
-                "item": "Maintain a clean, presentable code base with attention to detail and consistency",
-                "subItem":""
-              },
-              {
-                "item": "Implement pixel perfect UI's that match designs",
-                "subItem":""
-              },
-              {
-                "item": "Complete two-week sprints and participate in daily standups and sprint retrospectives",
+                "item": "NodeJS (Backend), PostgreSQL",
                 "subItem":""
               }
             ]
           },
           {
-            "title": "Education and/or Experience",
+            "title": "Requisitos Deseables",
             "subtitle": "",
             "content": [
               {
-                "item": "BS/MS in Computer Science or a related technical field (or comparable working experience)",
+                "item": "Conocimientos en AWS (Cloud) y ReactJS (Frontend)",
                 "subItem":""
               },
               {
-                "item": "3+ years professional experience shipping applications using React Native",
-                "subItem":""
-              },
-              {
-                "item": "Experience with weekly/bi-weekly sprints and SCRUM process methodologies",
-                "subItem":""
-              },
-              {
-                "item": "Working knowledge and experience using Git, GitHub, Jira and VSO",
+                "item": "Conocimiento en metodologías ágiles.",
                 "subItem":""
               }
             ]

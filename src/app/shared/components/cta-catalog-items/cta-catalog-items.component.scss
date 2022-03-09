@@ -59,3 +59,25 @@
     bottom: 19px;
   }
 }
+
+@media screen and (max-width: 500px) /* Mobile */ {
+  .cta-container {
+    h2 {
+      font-size: 2em;
+    }
+    .icon-right {
+      position: absolute;
+      width: 6em;
+      right: 10px;
+      z-index: 2;
+      top: -51px;
+    }
+    .icon-left {
+      position: absolute;
+      width: 7em;
+      left: -8px;
+      z-index: 2;
+      bottom: -80px;
+    }
+  }
+}

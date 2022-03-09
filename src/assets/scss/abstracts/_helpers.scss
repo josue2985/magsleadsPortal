@@ -1,7 +1,10 @@
-@import 'variables';
+@import "variables";
 .sides-padding {
   padding-right: $sides-padding;
   padding-left: $sides-padding;
+  max-width: 1288px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .text-center {
   text-align: center;
@@ -62,20 +65,27 @@
   font-weight: 600;
 }
 .yellow {
-  color:map-get($theme-colors, 'yellow');
+  color: map-get($theme-colors, "yellow");
 }
 .blue {
-  color:map-get($theme-colors, 'primary');
+  color: map-get($theme-colors, "primary");
+}
+
+span[tooltip] {
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-decoration-color: map-get($theme-colors, "primary");
+  cursor: help;
 }
 
 .shadowtxt {
   text-shadow: 3px 2px 4px #00000073;
 }
 .letterspacing1 {
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
 }
 .w-100 {
-  width:100%;
+  width: 100%;
 }
 
 .shadow-boxes {
@@ -90,15 +100,14 @@
   border-radius: $border-radius-boxes;
 }
 
-
-@media screen  and (max-width: 1024px) /* Desktop */ {
+@media screen and (max-width: 1024px) /* Desktop */ {
   .sides-padding {
     padding-right: 2em;
     padding-left: 2em;
   }
 }
 
-@media screen  and (max-width: 979px) /* Tablet */ {
+@media screen and (max-width: 979px) /* Tablet */ {
   .sides-padding {
     padding-right: 2em;
     padding-left: 2em;
@@ -106,7 +115,4 @@
 }
 
 @media screen and (max-width: 500px) /* Mobile */ {
-
 }
-
-

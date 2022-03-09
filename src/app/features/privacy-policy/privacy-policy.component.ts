@@ -12,7 +12,7 @@ export class PrivacyPolicyComponent implements OnInit {
 
   ngOnInit(): void {
     window.scrollTo(0, 0);
-    this.sectionTitle = 'Policy Privacy';
+    this.sectionTitle = 'Politicas de Privacidad';
   }
 
 }
