@@ -26,31 +26,73 @@
             <div class="social-icons">
               <ul>
                 <li>
-                  <i class="icon icon-facebook"></i>
+                  <a
+                    href="https://www.facebook.com/sharer/sharer.php?u=https%3A//magsleads.com/calculadora/calculadora-imc"
+                    target="_blank"
+                    ><i class="icon icon-facebook"></i
+                  ></a>
                 </li>
-                <li><i class="icon icon-tw"></i></li>
-                <li><i class="icon icon-email"></i></li>
-                <li><i class="icon icon-ws"></i></li>
+                <li>
+                  <a
+                    href="https://twitter.com/intent/tweet?text=Calcula%20tu%20indice%20de%20masa%20corporal%20ahora%20https%3A//magsleads.com/calculadora/calculadora-imc"
+                    target="_blank"
+                  >
+                    <i class="icon icon-tw"></i>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="mailto:?body=Calcula%20tu%20%C3%ADndice%20de%20masa%20corporal%20ahora%20https%3A//magsleads.com/calculadora/calculadora-imc"
+                    target="_blank"
+                  >
+                    <i class="icon icon-email"></i>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="whatsapp://send?text=Calcula%20tu%20%C3%ADndice%20de%20masa%20corporal%20ahora%20https%3A//magsleads.com/calculadora/calculadora-imc"
+                  >
+                    <i class="icon icon-ws"></i>
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
           <div class="actions-buttons">
-            <button class="outline">Embeber en mi proyecto</button>
-            <button class="normal" routerLink="/contactus">Solicitar Customizacion</button>
+            <button class="outline" (click)="embedThis()">Embeber en mi proyecto</button>
+            <button class="normal" routerLink="/contactus">
+              Solicitar Customizacion
+            </button>
           </div>
         </div>
       </div>
-      <div class="left-top-star move-up-down ">
-        <img class="follow-mouse" src="../../../../assets/img/3d-elements/catalog-items/star1.svg" alt="Star 3d">
+      <div class="left-top-star move-up-down">
+        <img
+          class="follow-mouse"
+          src="../../../../assets/img/3d-elements/catalog-items/star1.svg"
+          alt="Star 3d"
+        />
       </div>
       <div class="right-top-circle move-down-up">
-        <img class="follow-mouse" src="../../../../assets/img/3d-elements/catalog-items/circle-blue-large.svg" alt="Circle 3d">
+        <img
+          class="follow-mouse"
+          src="../../../../assets/img/3d-elements/catalog-items/circle-blue-large.svg"
+          alt="Circle 3d"
+        />
       </div>
       <div class="left-bottom-circle move-down-up">
-        <img class="follow-mouse" src="../../../../assets/img/3d-elements/catalog-items/circle-yellow-sm.svg" alt="Circle 3d">
+        <img
+          class="follow-mouse"
+          src="../../../../assets/img/3d-elements/catalog-items/circle-yellow-sm.svg"
+          alt="Circle 3d"
+        />
       </div>
       <div class="right-bottom-star move-up-down">
-        <img class="follow-mouse" src="../../../../assets/img/3d-elements/catalog-items/star2.svg" alt="Star 3d">
+        <img
+          class="follow-mouse"
+          src="../../../../assets/img/3d-elements/catalog-items/star2.svg"
+          alt="Star 3d"
+        />
       </div>
       <div class="blurred-fx"></div>
     </div>
@@ -62,9 +104,7 @@
     <p>
       {{ calculator?.definition }}
     </p>
-    
   </div>
-
 
   <div *ngIf="calculator?.name === 'calculadora-imc'">
     <app-bmi-calculator></app-bmi-calculator>
@@ -80,3 +120,25 @@
     <app-cta-catalog-items></app-cta-catalog-items>
   </div>
 </div>
+
+
+<div class="confirmation-modal" *ngIf="this.showEmbedModal">
+  <div class="title-header">
+    <h6>Hey! querido Developer.</h6>
+  </div>
+  <div class="content">
+    <div class="check">
+      <div class="copied" *ngIf="isCopied">Copiado!</div>
+      <code tooltip="Click para copiar." 
+        placement="top" showDelay="500" (click)="copy(this.iframeCode)">
+        {{this.iframeCode}}
+      </code>
+    </div>
+    <h6>
+      Estamos ansiosos de ayudarte a convertir más Clientes, copia el siguiente código en tu website y nosotros nos encargamos del resto, tendrás acceso gratuito a este lead magnet sin molesta publicidad ni cargo alguno. No hay Trucos!
+    </h6>
+    <small>Si tienes algún problema o quisieras que hagamos la implementación por ti por favor escríbenos a hola@magsleads.com</small>
+  </div>
+  <button class="btn m-t-2" (click)="onDismiss()">Listo!</button>
+</div>
+<div class="background-modal" *ngIf="this.showEmbedModal"></div>

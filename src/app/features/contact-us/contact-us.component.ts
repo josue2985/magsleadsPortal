@@ -32,6 +32,9 @@ export class ContactUsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      window.scrollTo(0, 0);
+     }
     // console.log(this.confirmationUrl);
     this.sectionTitle = 'Crear un Magnet Lead';
 
@@ -41,6 +44,15 @@ export class ContactUsComponent implements OnInit {
     });
 
     if (this.status === 200 || this.status === 503 && isPlatformBrowser(this.platformId)) {
+      const body = document.getElementById('body');
+      console.log(body);
+      body?.classList.add('no-scroll');
+    }
+  }
+
+  addNoScrollBody(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      window.scrollTo(0, 0);
       const body = document.getElementById('body');
       body?.classList.add('no-scroll');
     }
@@ -60,6 +72,7 @@ export class ContactUsComponent implements OnInit {
         err => {
           if (err instanceof ErrorEvent) {
             // client side error
+            this.addNoScrollBody();
             this.router.navigateByUrl('/contactus?status=503');
             // alert('Mensaje Error.');
             // console.log(err.error.message);
@@ -67,8 +80,10 @@ export class ContactUsComponent implements OnInit {
             // backend error. If status is 200, then the message successfully sent
             if (err.status === 200) {
               // alert('Mensaje Enviado!');
+              this.addNoScrollBody();
               this.router.navigateByUrl('/contactus?status=200');
             } else {
+              this.addNoScrollBody();
               this.router.navigateByUrl('/contactus?status=503');
               // console.log('Error status:');
               // console.log(err.status);
