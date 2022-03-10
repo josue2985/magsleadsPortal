@@ -40,7 +40,7 @@ export class CareersComponent implements OnInit, AfterViewInit {
 
   onApply(position: string): void {
     if (isPlatformBrowser(this.platformId)) {
-      window.location.href = 'mailto: info@seeyamobile.com?subject=' + position + ' Job Inquiry';
+      window.location.href = 'mailto: hola@magsleads.com?subject=' + position + ' Job Inquiry';
     }
   }
 

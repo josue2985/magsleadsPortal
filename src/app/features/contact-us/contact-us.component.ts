@@ -60,12 +60,13 @@ export class ContactUsComponent implements OnInit {
         err => {
           if (err instanceof ErrorEvent) {
             // client side error
-            alert('Mensaje Error.');
-            console.log(err.error.message);
+            this.router.navigateByUrl('/contactus?status=503');
+            // alert('Mensaje Error.');
+            // console.log(err.error.message);
           } else {
             // backend error. If status is 200, then the message successfully sent
             if (err.status === 200) {
-              alert('Mensaje Enviado!');
+              // alert('Mensaje Enviado!');
               this.router.navigateByUrl('/contactus?status=200');
             } else {
               this.router.navigateByUrl('/contactus?status=503');
