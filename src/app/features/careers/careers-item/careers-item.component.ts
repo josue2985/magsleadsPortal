@@ -38,7 +38,7 @@ export class CareersItemComponent implements OnInit {
 
   onApply(): void {
     if (isPlatformBrowser(this.platformId)) { 
-      window.location.href = 'mailto: info@seeyamobile.com?subject=' + this.career.position + ' Job Inquiry';
+      window.location.href = 'mailto: hola@magsleads.com?subject=' + this.career.position + ' Job Inquiry';
     }
   }
 
