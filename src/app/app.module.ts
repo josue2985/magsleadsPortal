@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ErrorHandler, Injectable } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -41,6 +41,21 @@ import { BmiExplanationComponent } from '@features/calculators/bmi-explanation/b
 import { CtaCatalogItemsComponent } from './shared/components/cta-catalog-items/cta-catalog-items.component';
 
 import { TooltipModule } from 'ng2-tooltip-directive';
+import { environment } from '../environments/environment';
+
+import * as Sentry from '@sentry/browser';
+
+Sentry.init({
+  dsn: 'https://0dee446ffb9e4f478a229b5cc4d28019@o1165374.ingest.sentry.io/6255046',
+  environment: environment.production ? 'prod' : 'dev'
+});
+
+@Injectable()
+export class SentryErrorHandler implements ErrorHandler {
+  handleError(error: any): void {
+    Sentry.captureException(error.originalError || error);
+  }
+}
 
 @NgModule({
   declarations: [
@@ -80,7 +95,8 @@ import { TooltipModule } from 'ng2-tooltip-directive';
   providers: [
     CareersService,
     NewsService,
-    CatalogService
+    CatalogService,
+    {provide: ErrorHandler, useClass: SentryErrorHandler}
   ],
   bootstrap: [AppComponent]
 })
