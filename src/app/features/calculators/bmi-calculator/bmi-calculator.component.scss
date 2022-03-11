@@ -34,7 +34,6 @@ $opacitySvg: 0.7;
   background: #f6fbff;
   border: 1.8px solid #b4c7d6;
   border-radius: 1em;
-  
 }
 
 .calculator__container {
@@ -491,8 +490,102 @@ input[type="number"] {
   -moz-appearance: textfield; /* Firefox */
 }
 
+@media screen and (max-width: 1024px) /* Tablet Landscape */ {
+  form.calculator {
+    .grid__row--field {
+      .input-container {
+        &.age {
+          input[type="radio"][id^="cb"] {
+            display: none;
+          }
+          .sub-label {
+            color: #69737b;
+            font-weight: bold;
+          }
+          label {
+            width: 96px;
+          }
 
-@media screen and (max-width: 500px) /* Mobile */ { 
+          label:before {
+            background-color: white;
+            color: white;
+            content: " ";
+            display: block;
+            border-radius: 50%;
+            position: absolute;
+            top: 10px;
+            right: 19px;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 28px;
+            transition-duration: 0.4s;
+            transform: scale(1);
+            border: 1.4px solid $md-gray;
+          }
+
+          label img {
+            max-height: 48px;
+            transition-duration: 0.2s;
+            transform-origin: 50% 50%;
+            filter: grayscale(90%);
+          }
+
+          :checked + label {
+            box-shadow: 0px 0px 0 1.4px #4ac683;
+            background: #beffdc;
+          }
+
+          :checked + label:before {
+            background-color: #4ac683;
+            transform: scale(1);
+            // padding: 7px;
+            // padding-top: 4px;
+            border: 1.4px solid #4ac683;
+          }
+
+          :checked + label img {
+            transform: scale(1);
+            z-index: -1;
+            filter: grayscale(0%);
+          }
+        }
+        &.anios {
+          .input-field {
+            width: 45%;
+            margin: 0px 15px;
+            white-space: nowrap;
+          }
+        }
+        &.weight {
+          .input-field {
+            width: 45%;
+            margin: 0px 15px;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+  .input-field {
+    input[type="number"] {
+    }
+    input[type="number"]:hover {
+    }
+
+    .form_input {
+      &.ages {
+      }
+      &.weight {
+      }
+      &.height {
+        max-width: 49%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) /* Mobile */ {
   .grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -516,11 +609,55 @@ input[type="number"] {
     grid-column-gap: 0em;
     grid-row-gap: 0.2em;
   }
+
+
   form.calculator {
     .grid__row--field {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 0.4em;
       .input-container {
         &.age {
           transform: scale(0.8) translate(-53px, 0px);
+          input[type="radio"][id^="cb"] {
+            display: none;
+          }
+          .sub-label {
+            color: #69737b;
+            font-weight: bold;
+          }
+          label {
+            width: 120px;
+            &:not(:last-child) {
+              margin-right: 20px;
+            }
+            &:hover {
+              background-color: darken($input-background, 2%);
+            }
+          }
+  
+          label:before {
+            top: 10px;
+            right: 19px;
+            width: 30px;
+            height: 30px;
+          }
+  
+          label img {
+            max-height: 56px;
+          }
+  
+          :checked + label {
+
+          }
+  
+          :checked + label:before {
+
+          }
+  
+          :checked + label img {
+
+          }
         }
         &.anios {
           .input-field {
@@ -535,25 +672,19 @@ input[type="number"] {
       }
     }
   }
-  .grid__row--field {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: .4em;
-    label {
-      font-weight: bold;
-      font-size: 1em;
-      &.section-title {
-        margin-bottom: 1.5em;
-      }
-    }
-  }
+
   .feedback-box {
     width: fit-content;
   }
   .results {
     flex-direction: column;
   }
-  .actual-weight, .range-ideal-weight {
+  .actual-weight,
+  .range-ideal-weight {
     margin-top: 1em;
   }
+  .actionsBox {
+    flex-direction: column;
+  }
 }
+

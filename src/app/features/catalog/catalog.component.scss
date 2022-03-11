@@ -123,3 +123,9 @@
     }
   }
 }
+
+@media screen and (max-width: 360px) /* Mobile Small Screens */ { 
+  .grid-cards {
+    grid-template-columns: repeat(auto-fit, minmax(298px, 1fr));
+  }
+}

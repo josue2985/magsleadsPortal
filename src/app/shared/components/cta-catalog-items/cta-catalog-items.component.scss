@@ -60,6 +60,29 @@
   }
 }
 
+
+@media screen and (max-width: 1024px) /* Tablet Landscape */ { 
+  .cta-container {
+    h2 {
+      font-size: 2.5em;
+    }
+    .icon-right {
+      position: absolute;
+      width: 9em;
+      right: 51px;
+      z-index: 2;
+      top: -39px;
+    }
+    .icon-left {
+      position: absolute;
+      width: 11em;
+      left: -1px;
+      z-index: 2;
+      bottom: -59px;
+    }
+  }
+}
+
 @media screen and (max-width: 500px) /* Mobile */ {
   .cta-container {
     h2 {
