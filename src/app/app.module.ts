@@ -1,5 +1,5 @@
 import { NgModule, ErrorHandler, Injectable } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Meta, Title } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -96,6 +96,8 @@ export class SentryErrorHandler implements ErrorHandler {
     CareersService,
     NewsService,
     CatalogService,
+    Meta,
+    Title,
     {provide: ErrorHandler, useClass: SentryErrorHandler}
   ],
   bootstrap: [AppComponent]

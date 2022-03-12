@@ -47,5 +47,12 @@ export interface ICalcs {
   isPrivate: boolean;
   countViews: number;
   countLikes: number;
+  metaTagsPage: any;
   filter(arg0: (n: any) => boolean): ICalcs;
+}
+
+export interface IMetaTagsPage {
+  titleContent: string;
+  descripContent: string;
+  pictureUrl: string;
 }

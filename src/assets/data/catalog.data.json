@@ -14,26 +14,15 @@
       "date": "2022-02-12",
       "content": "placeholder",
       "isPrivate": false,
-      "countViews": "45",
-      "countLikes": "23"
-    },
-    {
-      "name": "calculadora-peso-ideal",
-      "isInternal": true,
-      "category": "fitness",
-      "path": "calculadora-peso-ideal",
-      "src": "assets/img/calcs-icons/icon-peso.svg",
-      "headline": "Cuál es mi peso ideal?",
-      "itemHeadline": "Calculadora de Indice de Masa Corporal (IMC)",
-      "byline": "Cuál es tu peso ideal y cómo puedes calcularlo?",
-      "titleDefinition": "Que es el IMC?",
-      "definition": "El IMC o Índice de Masa Corporal es la medición que valora tu peso en relación con tu altura. Puede usarse a cualquier edad y se puede calcular el IMC de mujeres, hombres y niños. El cálculo del IMC clasifica a los individuos en bajo peso, peso normal o sobrepeso, por lo que gracias a él se puede determinar si una persona tiene un peso inapropiado o poco sano para su altura. ",
-      "author": "Soroban",
-      "date": "2022-02-12",
-      "content": "placeholder",
-      "isPrivate": true,
-      "countViews": "0",
-      "countLikes": "0"
+      "countViews": "145",
+      "countLikes": "223",
+      "metaTagsPage": [
+        {
+          "titleContent": "Tabla de IMC | Calculadora de imc",
+          "descripContent": "El Indice de Masa Corporal mide el contenido de grasa en relación a la estatura y el peso. Con la calculadora de IMC de MagsLeads puedes calcular tu IMC (Índice de Masa Corporal).",
+          "pictureUrl": "https://magsleads.com/assets/img/magsleads-min.jpg"
+        }
+      ]
     },
     {
       "name": "calculadora-agua",
@@ -42,8 +31,33 @@
       "path": "calculadora-agua",
       "src": "assets/img/calcs-icons/icon-agua.svg",
       "headline": "Cuánta agua debo tomar?",
-      "itemHeadline": "Calculadora de Indice de Masa Corporal (IMC)",
+      "itemHeadline": "Calcula cuanto agua tienes que beber al día",
       "byline": "Calcular la cantidad de agua que debes de beber según tu peso ",
+      "titleDefinition": "¿Cuánta agua debo tomar según mi peso?",
+      "definition": "Los resultados que proporciona esta calculadora para conocer la cantidad de agua que has de beber al día no tiene en cuenta la actividad física, por lo que si practicas deporte, la cifra aumenta considerablemente. Si practicas alguna actividad deportiva con regularidad, existe una fórmula más exacta que está basada en el número de calorías que tenemos que aportar al cuerpo cada día. Por ejemplo, si tenemos que comer alimentos por valor de 2.000 Kcal diarias, entonces tenemos que beber 2 litros de agua al día.",
+      "author": "Soroban",
+      "date": "2022-02-12",
+      "content": "placeholder",
+      "isPrivate": false,
+      "countViews": "10",
+      "countLikes": "70",
+      "metaTagsPage": [
+        {
+          "titleContent": "Calculadora de Hidratación | Calcular consumo diario de agua",
+          "descripContent": "¿Cuánta agua debo tomar según mi peso? — ¿Cuánta agua debo tomar según mi peso? Calculadora de agua diaria.",
+          "pictureUrl": "https://magsleads.com/assets/img/magsleads-min.jpg"
+        }
+      ]
+    },
+    {
+      "name": "calculadora-peso-ideal",
+      "isInternal": true,
+      "category": "fitness",
+      "path": "calculadora-peso-ideal",
+      "src": "assets/img/calcs-icons/icon-peso.svg",
+      "headline": "Cuál es mi peso ideal?",
+      "itemHeadline": "Calculadora de Peso Ideal",
+      "byline": "Cuál es tu peso ideal y cómo puedes calcularlo?",
       "titleDefinition": "Que es el IMC?",
       "definition": "El IMC o Índice de Masa Corporal es la medición que valora tu peso en relación con tu altura. Puede usarse a cualquier edad y se puede calcular el IMC de mujeres, hombres y niños. El cálculo del IMC clasifica a los individuos en bajo peso, peso normal o sobrepeso, por lo que gracias a él se puede determinar si una persona tiene un peso inapropiado o poco sano para su altura. ",
       "author": "Soroban",
@@ -51,7 +65,14 @@
       "content": "placeholder",
       "isPrivate": true,
       "countViews": "0",
-      "countLikes": "0"
+      "countLikes": "0",
+      "metaTagsPage": [
+        {
+          "titleContent": "PESO IDEAL | Calculadora de imc",
+          "descripContent": "El Indice de Masa Corporal mide el contenido de grasa en relación a la estatura y el peso. Con la calculadora de IMC de MagsLeads puedes calcular tu IMC (Índice de Masa Corporal).",
+          "pictureUrl": "https://magsleads.com/assets/img/magsleads-min.jpg"
+        }
+      ]
     },
     {
       "name": "presupuesto-app",
@@ -69,7 +90,14 @@
       "content": "placeholder",
       "isPrivate": true,
       "countViews": "0",
-      "countLikes": "0"
+      "countLikes": "0",
+      "metaTagsPage": [
+        {
+          "titleContent": "Tabla de IMC | Calculadora de imc",
+          "descripContent": "El Indice de Masa Corporal mide el contenido de grasa en relación a la estatura y el peso. Con la calculadora de IMC de MagsLeads puedes calcular tu IMC (Índice de Masa Corporal).",
+          "pictureUrl": "https://magsleads.com/assets/img/magsleads-min.jpg"
+        }
+      ]
     },
     {
       "name": "presupuesto-web",
@@ -87,7 +115,14 @@
       "content": "placeholder",
       "isPrivate": true,
       "countViews": "0",
-      "countLikes": "0"
+      "countLikes": "0",
+      "metaTagsPage": [
+        {
+          "titleContent": "Tabla de IMC | Calculadora de imc",
+          "descripContent": "El Indice de Masa Corporal mide el contenido de grasa en relación a la estatura y el peso. Con la calculadora de IMC de MagsLeads puedes calcular tu IMC (Índice de Masa Corporal).",
+          "pictureUrl": "https://magsleads.com/assets/img/magsleads-min.jpg"
+        }
+      ]
     },
     {
       "name": "presupuesto-iva",
@@ -105,6 +140,13 @@
       "content": "placeholder",
       "isPrivate": true,
       "countViews": "0",
-      "countLikes": "0"
+      "countLikes": "0",
+      "metaTagsPage": [
+        {
+          "titleContent": "Tabla de IMC | Calculadora de imc",
+          "descripContent": "El Indice de Masa Corporal mide el contenido de grasa en relación a la estatura y el peso. Con la calculadora de IMC de MagsLeads puedes calcular tu IMC (Índice de Masa Corporal).",
+          "pictureUrl": "https://magsleads.com/assets/img/magsleads-min.jpg"
+        }
+      ]
     }
   ]

@@ -1,8 +1,10 @@
 import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
-import { ICalcs, CatalogService } from '../../../shared/services/catalog.service';
+import { ICalcs, CatalogService, IMetaTagsPage } from '../../../shared/services/catalog.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { forEach } from 'lodash';
 import { isPlatformBrowser } from '@angular/common';
+import { Title, Meta, MetaDefinition } from '@angular/platform-browser';
+import { environment } from 'environments/environment';
 
 @Component({
   selector: 'app-catalog-item',
@@ -15,17 +17,23 @@ export class CatalogItemComponent implements OnInit {
   calculator: ICalcs;
   headerColor: any;
 
+  metaTagsInfo: IMetaTagsPage;
+
   showEmbedModal: boolean;
 
-  iframeCode = '<iframe src="https://magsleads.com/calculadora-imc" name="MagsLeads - Calculadora IMC" scrolling="Yes" height="800px" width="100%" style="border: none;"></iframe>';
+  urlCalcMetaTags = environment.baseUrl + 'calculadora/';
 
   isCopied: boolean;
+
+  iframeCode: string;
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
     private catalogService: CatalogService,
-    @Inject(PLATFORM_ID) private platformId: any
+    @Inject(PLATFORM_ID) private platformId: any,
+    private titleService: Title,
+    private metaService: Meta
   ) { }
 
   ngOnInit(): void {
@@ -35,6 +43,7 @@ export class CatalogItemComponent implements OnInit {
     this.catalogService.get(this.calculatorName).then(result => {
       this.calculator = result;
       this.setHeaderColors();
+      this.setMetaTags();
       if (!this.calculator) {
          // this.router.navigate(['/page-not-found']);
       }
@@ -46,15 +55,78 @@ export class CatalogItemComponent implements OnInit {
     this.router.navigate(['/']);
   }
 
+  setMetaTags(): void {
+    const metaTags = this.calculator.metaTagsPage;
+    metaTags.forEach((results: any) => {
+      this.metaTagsInfo = results;
+      // Page title
+      this.titleService.setTitle(this.metaTagsInfo.titleContent);
+      // Page Description
+      this.metaService.addTag({
+        name: 'description',
+        content: this.metaTagsInfo.descripContent
+      });
+      // OG Facebook
+      this.metaService.addTag({
+        property: 'og:type',
+        content: 'website'
+      });
+      this.metaService.addTag({
+        property: 'og:url',
+        content: this.urlCalcMetaTags + this.calculatorName
+      });
+      this.metaService.addTag({
+        property: 'og:title',
+        content: this.metaTagsInfo.titleContent
+      });
+      this.metaService.addTag({
+        property: 'og:description',
+        content: this.metaTagsInfo.descripContent
+      });
+      this.metaService.addTag({
+        property: 'og:image',
+        content: this.metaTagsInfo.pictureUrl
+      });
+      // OG Twitter
+      this.metaService.addTag({
+        property: 'twitter:card',
+        content: 'summary_large_image'
+      });
+      this.metaService.addTag({
+        property: 'twitter:url',
+        content: this.urlCalcMetaTags + this.calculatorName
+      });
+      this.metaService.addTag({
+        property: 'twitter:title',
+        content: this.metaTagsInfo.titleContent
+      });
+      this.metaService.addTag({
+        property: 'twitter:description',
+        content: this.metaTagsInfo.descripContent
+      });
+      this.metaService.addTag({
+        property: 'twitter:image',
+        content: this.metaTagsInfo.pictureUrl
+      });
+    });
+  }
+
   setHeaderColors(): void {
-    if (this.calculatorName === 'calculadora-imc') {
-      this.headerColor = 'beige';
-    } else {
-      this.headerColor = 'error-color';
+    switch (this.calculatorName) {
+      case 'calculadora-imc':
+        this.headerColor = 'imc';
+        break;
+      case 'calculadora-agua':
+        this.headerColor = 'agua';
+        break;
+      default:
+        this.headerColor = 'error-color';
+        break;
     }
   }
 
   embedThis(): void {
+    this.iframeCode = `<iframe src="https://magsleads.com/${this.calculatorName}" name="${this.calculatorName}" scrolling="Yes" height="800px" width="100%" style="border: none;"></iframe>`;
     if (isPlatformBrowser(this.platformId)) {
       window.scrollTo(0, 0);
       const body = document.getElementById('body');
