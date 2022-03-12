@@ -21,6 +21,8 @@ export class CatalogItemComponent implements OnInit {
 
   showEmbedModal: boolean;
 
+  urlCalculator: any;
+
   urlCalcMetaTags = environment.baseUrl + 'calculadora/';
 
   isCopied: boolean;
@@ -48,6 +50,7 @@ export class CatalogItemComponent implements OnInit {
          // this.router.navigate(['/page-not-found']);
       }
     });
+    this.urlCalculator = environment.baseUrl + 'calculadora/' + this.calculatorName;
     this.followMovement();
   }
 
