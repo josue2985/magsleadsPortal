@@ -112,10 +112,15 @@
       <app-bmi-explanation></app-bmi-explanation>
     </div>
   </div>
+  <div *ngIf="calculator?.name === 'calculadora-agua'">
+    <app-water-calculator></app-water-calculator>
+    <div class="m-t-5 m-b-5">
+     <app-water-explanation></app-water-explanation>
+    </div>
+  </div>
   <div *ngIf="calculator?.name === 'calculadora-peso-ideal'">
     <app-ideal-weight-calculator></app-ideal-weight-calculator>
   </div>
-
   <div>
     <app-cta-catalog-items></app-cta-catalog-items>
   </div>

@@ -34,10 +34,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { BmiCalculatorComponent } from '@features/calculators/bmi-calculator/bmi-calculator.component';
 import { IdealWeightCalculatorComponent } from '@features/calculators/ideal-weight-calculator/ideal-weight-calculator.component';
+import { WaterCalculatorComponent } from '@features/calculators/water-calculator/water-calculator.component';
 import { MaxLengthDirective } from './shared/directive/max-length.directive';
 
 // Explanations Impoprts
 import { BmiExplanationComponent } from '@features/calculators/bmi-explanation/bmi-explanation.component';
+import { WaterExplanationComponent } from '@features/calculators/water-explanation/water-explanation.component';
 import { CtaCatalogItemsComponent } from './shared/components/cta-catalog-items/cta-catalog-items.component';
 
 import { TooltipModule } from 'ng2-tooltip-directive';
@@ -81,7 +83,9 @@ export class SentryErrorHandler implements ErrorHandler {
     IdealWeightCalculatorComponent,
     BmiExplanationComponent,
     CtaCatalogItemsComponent,
-    MaxLengthDirective
+    MaxLengthDirective,
+    WaterCalculatorComponent,
+    WaterExplanationComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

@@ -15,6 +15,7 @@ import { CatalogItemComponent } from '@features/catalog/catalog-item/catalog-ite
 import { PrivacyPolicyComponent } from '@features/privacy-policy/privacy-policy.component';
 import { TermsOfUseComponent } from '@features/terms-of-use/terms-of-use.component';
 import { BmiCalculatorComponent } from '@features/calculators/bmi-calculator/bmi-calculator.component';
+import { WaterCalculatorComponent } from '@features/calculators/water-calculator/water-calculator.component';
 
 const routes: Routes = [
   { path: '',
@@ -47,6 +48,10 @@ const routes: Routes = [
   {
     path: 'calculadora-imc',
     component: BmiCalculatorComponent,
+  },
+  {
+    path: 'calculadora-agua',
+    component: WaterCalculatorComponent,
   },
   { path: '',
     component: LoginLayoutComponent,
