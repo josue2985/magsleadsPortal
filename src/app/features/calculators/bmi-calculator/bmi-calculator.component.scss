@@ -674,7 +674,7 @@ input[type="number"] {
   }
 
   .feedback-box {
-    width: fit-content;
+    width: 68%;
   }
   .results {
     flex-direction: column;
@@ -685,6 +685,24 @@ input[type="number"] {
   }
   .actionsBox {
     flex-direction: column;
+    .btn.normal {
+      width: 100%;
+    }
+    .nobg {
+      margin-top: 0.5em;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) /* Mobile */ { 
+  .feedback-box {
+    width: 63%;
+  }
+}
+
+@media screen and (max-width: 360px) /* Mobile */ { 
+  .feedback-box {
+    width: 58%;
   }
 }
 
