@@ -7,16 +7,14 @@
           <label class="section-title">1. Cuál es tu sexo?</label>
           <div class="input-container age dflex">
             <div>
-              <input type="radio" id="cb1" name="gender"
-              />
+              <input type="radio" id="cb1" name="gender" />
               <label for="cb1"
                 ><img src="../../../../assets/img/calc-bmi/male-pic.png" />
               </label>
               <div class="sub-label">Hombre</div>
             </div>
             <div>
-              <input type="radio" id="cb2" name="gender" 
-              />
+              <input type="radio" id="cb2" name="gender" />
               <label for="cb2"
                 ><img src="../../../../assets/img/calc-bmi/female-pic.png" />
               </label>
@@ -30,7 +28,6 @@
             >2. Cuántos años tienes?</label
           >
           <div class="input-container anios dflex align-items-center">
-
             <div class="input-field">
               <input
                 class="form_input ages"
@@ -42,8 +39,8 @@
                 placeholder="36"
                 formControlName="ageInput"
                 [class.is-invalid]="
-                imcCalculator.get('ageInput')?.touched &&
-                imcCalculator.get('ageInput')?.invalid
+                  imcCalculator.get('ageInput')?.touched &&
+                  imcCalculator.get('ageInput')?.invalid
                 "
               />
               <label for="">Años</label>
@@ -52,7 +49,12 @@
         </div>
         <!-- TALLA -->
         <div class="grid__row--field mt-2">
-          <label class="section-title" for="alto">3. Cuánto mides?</label>
+          <label class="section-title" for="alto"
+            >3. Cuánto mides
+            <span *ngIf="!isMeters">en centímetros</span>
+            <span *ngIf="isMeters">en metros</span>
+            ?
+          </label>
           <div class="input-container height dflex align-items-center">
             <div class="input-field" *ngIf="!isMeters">
               <input
@@ -66,18 +68,6 @@
                 appMaxLength="3"
                 placeholder="165"
               />
-
-              <!-- <input
-                class="form_input height"
-                [class.is-invalid]="
-                  imcCalculator.get('alto')?.touched &&
-                  imcCalculator.get('alto')?.invalid
-                "
-                formControlName="alto"
-                type="number"
-                [value]="imcCalculator.value.altoSlide"
-                required
-              /> -->
               <label for="">Cm</label>
             </div>
             <div class="input-field" *ngIf="isMeters">
@@ -98,25 +88,34 @@
           <div class="measures-selectors">
             <button
               class="selector-btn"
+              *ngIf="isMeters"
               (click)="toogleMToCm()"
               [ngClass]="isMeters ? 'active' : ''"
               [disabled]="!isMeters"
             >
-              Centimetros
+              <i class="fa-solid fa-shuffle"></i>
+              Cambiar a Centímetros
             </button>
             <button
               class="selector-btn"
+              *ngIf="!isMeters"
               (click)="toogleCmToM()"
               [ngClass]="!isMeters ? 'active' : ''"
               [disabled]="isMeters"
             >
-              Metros
+              <i class="fa-solid fa-shuffle"></i>
+              Cambiar a Metros
             </button>
           </div>
         </div>
         <!-- PESO -->
         <div class="grid__row--field mt-2">
-          <label for="peso" class="section-title">4. Cuánto pesas?</label>
+          <label for="peso" class="section-title"
+            >4. Cuánto pesas
+            <span *ngIf="!isKilos">en Libras</span>
+            <span *ngIf="isKilos">en Kilos</span>
+            ?
+          </label>
           <div class="input-container weight dflex align-items-center">
             <!-- <div class="slidecontainer">
               <input
@@ -160,19 +159,23 @@
           <div class="measures-selectors ml-15">
             <button
               class="selector-btn"
+              *ngIf="isKilos"
               (click)="toogleKgToLb()"
               [ngClass]="isKilos ? 'active' : ''"
               [disabled]="!isKilos"
             >
-              Libras
+              <i class="fa-solid fa-shuffle"></i>
+              Cambiar a Libras
             </button>
             <button
               class="selector-btn"
+              *ngIf="!isKilos"
               (click)="toogleLbToKg()"
               [ngClass]="!isKilos ? 'active' : ''"
               [disabled]="isKilos"
             >
-              Kilogramos
+              <i class="fa-solid fa-shuffle"></i>
+              Cambiar a Kilos
             </button>
           </div>
         </div>
@@ -188,8 +191,10 @@
           <div class="imc">
             <div>Tu IMC personal</div>
             <div class="imc-results">
-              {{ imc | number: "2.1-1" }} - 
-              <span *ngIf="this.imcLabel === 'Obesidad Extrema'">Obesidad Extrema</span>
+              {{ imc | number: "2.1-1" }} -
+              <span *ngIf="this.imcLabel === 'Obesidad Extrema'"
+                >Obesidad Extrema</span
+              >
               <span *ngIf="this.imcLabel === 'Obesidad'">Obesidad</span>
               <span *ngIf="this.imcLabel === 'Sobrepeso'">Exceso de Peso</span>
               <span *ngIf="this.imcLabel === 'Peso Normal'">Normal</span>
@@ -210,11 +215,21 @@
           </div> -->
         </div>
         <div *ngIf="errorsMessage && imcCalculator.invalid" class="errors">
-          <p *ngIf="imcCalculator.get('ageInput')?.invalid">Falta completar Años</p>
-          <p *ngIf="imcCalculator.get('altoMeters')?.invalid">Falta completar Metros</p>
-          <p *ngIf="imcCalculator.get('altoCm')?.invalid">Falta completar Centimetros</p>
-          <p *ngIf="imcCalculator.get('pesoKilo')?.invalid">Falta completar Kilo</p>
-          <p *ngIf="imcCalculator.get('pesoLibs')?.invalid">Falta completar Libras</p>
+          <p *ngIf="imcCalculator.get('ageInput')?.invalid">
+            Falta completar Años
+          </p>
+          <p *ngIf="imcCalculator.get('altoMeters')?.invalid">
+            Falta completar Metros
+          </p>
+          <p *ngIf="imcCalculator.get('altoCm')?.invalid">
+            Falta completar Centimetros
+          </p>
+          <p *ngIf="imcCalculator.get('pesoKilo')?.invalid">
+            Falta completar Kilo
+          </p>
+          <p *ngIf="imcCalculator.get('pesoLibs')?.invalid">
+            Falta completar Libras
+          </p>
         </div>
       </div>
     </div>

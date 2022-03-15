@@ -466,10 +466,10 @@ a:not([href]).nobg {
       border-radius: 10px 10px 10px 10px;
     }
     &.active {
-      background: $blueColor;
+      background: #798faf;;
       color: white;
       &:hover {
-        background: lighten($blueColor, 5%);
+        background: lighten(#798faf, 5%);
       }
     }
     &:disabled {
@@ -692,6 +692,9 @@ input[type="number"] {
       margin-top: 0.5em;
     }
   }
+  .measures-selectors.ml-15 {
+    margin-left: 0px;
+  } 
 }
 
 @media screen and (max-width: 375px) /* Mobile */ { 
