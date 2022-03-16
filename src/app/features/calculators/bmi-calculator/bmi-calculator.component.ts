@@ -16,6 +16,8 @@ export class BmiCalculatorComponent implements OnInit {
   isKilos = false;
   errorsMessage: boolean;
 
+  loading: boolean;
+
   constructor() { }
 
   imcCalculator = new FormGroup({
@@ -37,6 +39,10 @@ export class BmiCalculatorComponent implements OnInit {
   // To Do List
 
   onSubmit() {
+    this.loading = true;
+    setTimeout(() => {
+      this.loading = false;
+    }, 600);
     if ( this.imcCalculator.valid ) {
       this.errorsMessage = false;
       this.calcularImc();

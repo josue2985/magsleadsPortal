@@ -191,7 +191,12 @@
           </button>
           <a class="nobg" (click)="resetTheForm()">Volver a Empezar</a>
         </div>
-        <div *ngIf="imc >= 0 && !errorsMessage" class="results">
+        <div *ngIf="loading" class="results loading">
+          <div class="fa-2x text-center">
+            <i class="fas fa-spinner fa-spin"></i>
+          </div>
+        </div>
+        <div *ngIf="imc >= 0 && !errorsMessage && !loading" class="results">
           <div class="imc">
             <div>Tu IMC personal</div>
             <div class="imc-results">
@@ -218,7 +223,7 @@
             <div class="range-ideal-weight-results">45kg - 80kg</div>
           </div> -->
         </div>
-        <div *ngIf="errorsMessage && imcCalculator.invalid" class="errors">
+        <div *ngIf="errorsMessage && imcCalculator.invalid && !loading" class="errors">
           <p *ngIf="imcCalculator.get('ageInput')?.invalid">
             Falta completar Años
           </p>

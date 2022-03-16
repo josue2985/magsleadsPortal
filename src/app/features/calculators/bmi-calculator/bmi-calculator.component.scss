@@ -278,6 +278,9 @@ svg {
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
+  &.loading {
+    color: #1F72F5;
+  }
   .imc,
   .actual-weight,
   .range-ideal-weight {
