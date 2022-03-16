@@ -54,6 +54,7 @@
             <span *ngIf="!isMeters">en centímetros</span>
             <span *ngIf="isMeters">en metros</span>
             ?
+            <small *ngIf="isMeters">Usa punto (.) en vez de coma (,)</small>
           </label>
           <div class="input-container height dflex align-items-center">
             <div class="input-field" *ngIf="!isMeters">
@@ -67,6 +68,7 @@
                 type="number"
                 appMaxLength="3"
                 placeholder="165"
+                pattern="\d*"
               />
               <label for="">Cm</label>
             </div>
@@ -138,6 +140,7 @@
                 type="number"
                 appMaxLength="3"
                 placeholder="69"
+                pattern="\d*"
               />
               <label for="">Kg</label>
             </div>
@@ -152,6 +155,7 @@
                 type="number"
                 appMaxLength="3"
                 placeholder="152"
+                pattern="\d*"
               />
               <label for="">Lb</label>
             </div>
@@ -182,7 +186,7 @@
       </div>
       <div class="dflex flex-direction-col mt-4 feedback-box">
         <div class="actionsBox">
-          <button class="btn normal" (click)="onSubmit()">
+          <button class="btn normal" type=submit (keydown.enter)="onSubmit()" (click)="onSubmit()">
             <a>Calcular mi IMC</a>
           </button>
           <a class="nobg" (click)="resetTheForm()">Volver a Empezar</a>

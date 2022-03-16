@@ -83,6 +83,10 @@ $opacitySvg: 0.7;
     font-size: 1.1em;
     &.section-title {
       margin-bottom: 1.5em;
+      small {
+        display: block;
+        color: #607d8b;
+      }
     }
   }
 }
@@ -466,7 +470,7 @@ a:not([href]).nobg {
       border-radius: 10px 10px 10px 10px;
     }
     &.active {
-      background: #798faf;;
+      background: #798faf;
       color: white;
       &:hover {
         background: lighten(#798faf, 5%);
@@ -610,7 +614,6 @@ input[type="number"] {
     grid-row-gap: 0.2em;
   }
 
-
   form.calculator {
     .grid__row--field {
       display: flex;
@@ -635,28 +638,25 @@ input[type="number"] {
               background-color: darken($input-background, 2%);
             }
           }
-  
+
           label:before {
             top: 10px;
             right: 19px;
             width: 30px;
             height: 30px;
           }
-  
+
           label img {
             max-height: 56px;
           }
-  
+
           :checked + label {
-
           }
-  
+
           :checked + label:before {
-
           }
-  
-          :checked + label img {
 
+          :checked + label img {
           }
         }
         &.anios {
@@ -694,18 +694,17 @@ input[type="number"] {
   }
   .measures-selectors.ml-15 {
     margin-left: 0px;
-  } 
+  }
 }
 
-@media screen and (max-width: 375px) /* Mobile */ { 
+@media screen and (max-width: 375px) /* Mobile */ {
   .feedback-box {
     width: 63%;
   }
 }
 
-@media screen and (max-width: 360px) /* Mobile */ { 
+@media screen and (max-width: 360px) /* Mobile */ {
   .feedback-box {
     width: 58%;
   }
 }
-
